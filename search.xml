@@ -705,54 +705,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Better MC [FORGE] - BMC1</title>
-    <url>/gallery/BetterMCFORGE-BMC1/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">有只龙</td>
-<td align="center">v60.5</td>
-<td align="center">1.16.5-Forge</td>
-</tr>
-</tbody></table>
-<div style="text-align: center; color: red;">支持直接下载</div>
-
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://space.bilibili.com/179250719">
-                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc1">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/205.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://modpack.top/pro/betterMC/betterMC(forge)1.16.5v60.5.zip">
-                <img src="/images/file-download-line.svg" alt="download">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Better MC [FORGE] - BMC2</title>
     <url>/gallery/BetterMCFORGE-BMC2/</url>
     <content><![CDATA[<table>
@@ -787,6 +739,54 @@
             </a>
         </div><div class="flex-item">
             <a href="https://modpack.top/pro/betterMC/betterMC(forge)1.18.2v20.zip">
+                <img src="/images/file-download-line.svg" alt="download">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Better MC [FORGE] - BMC1</title>
+    <url>/gallery/BetterMCFORGE-BMC1/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">有只龙</td>
+<td align="center">v60.5</td>
+<td align="center">1.16.5-Forge</td>
+</tr>
+</tbody></table>
+<div style="text-align: center; color: red;">支持直接下载</div>
+
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://space.bilibili.com/179250719">
+                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc1">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/205.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://modpack.top/pro/betterMC/betterMC(forge)1.16.5v60.5.zip">
                 <img src="/images/file-download-line.svg" alt="download">
             </a>
         </div>
@@ -3111,6 +3111,62 @@
       </tags>
   </entry>
   <entry>
+    <title>FTB Presents Stoneblock 2</title>
+    <url>/gallery/FTBPresentsStoneblock2/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">10935336(CFPA-Team)</td>
+<td align="center">1.16.0</td>
+<td align="center">1.12.2-Forge</td>
+</tr>
+</tbody></table>
+<div style="text-align: center; color: red;">支持直接下载</div>
+
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://feed-the-beast.com/modpacks/4-ftb-presents-stoneblock-2?tab=about">
+                <img src="/images/ftb.svg" alt="ftb">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/ftb-presents-stoneblock-2">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/48.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://github.com/CFPAOrg/Modpack-GuideBook-i18n">
+                <img src="/images/github-fill.svg" alt="github">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://cfpa.site/">
+                <img src="/images/cfpa.svg" alt="cfpa">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://modpack.top/pro/FTB Presents Stoneblock 2/Stone Block 2-1.16.0-windows.zip">
+                <img src="/images/file-download-line.svg" alt="download">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>FTB Pyramid Reborn 3.0</title>
     <url>/gallery/FTBPyramidReborn30/</url>
     <content><![CDATA[<table>
@@ -3157,62 +3213,6 @@
             </a>
         </div><div class="flex-item">
             <a href="https://modpack.top/pro/FTB Pyramid Reborn 3/FTB Pyramid Reborn-2.1.1-windows.zip">
-                <img src="/images/file-download-line.svg" alt="download">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FTB Presents Stoneblock 2</title>
-    <url>/gallery/FTBPresentsStoneblock2/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">10935336(CFPA-Team)</td>
-<td align="center">1.16.0</td>
-<td align="center">1.12.2-Forge</td>
-</tr>
-</tbody></table>
-<div style="text-align: center; color: red;">支持直接下载</div>
-
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://feed-the-beast.com/modpacks/4-ftb-presents-stoneblock-2?tab=about">
-                <img src="/images/ftb.svg" alt="ftb">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/ftb-presents-stoneblock-2">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/48.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://github.com/CFPAOrg/Modpack-GuideBook-i18n">
-                <img src="/images/github-fill.svg" alt="github">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://cfpa.site/">
-                <img src="/images/cfpa.svg" alt="cfpa">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://modpack.top/pro/FTB Presents Stoneblock 2/Stone Block 2-1.16.0-windows.zip">
                 <img src="/images/file-download-line.svg" alt="download">
             </a>
         </div>
@@ -3435,52 +3435,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Fantasy Realm 1.18</title>
-    <url>/gallery/FantasyRealm118/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">VM-Team</td>
-<td align="center">v3</td>
-<td align="center">1.18.2-Forge</td>
-</tr>
-</tbody></table>
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://space.bilibili.com/2085089798">
-                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/fantasy-realm">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/497.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://github.com/VM-Chinese-translate-group/fantasy-realm">
-                <img src="/images/github-fill.svg" alt="github">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Fantasy Realm 1.16</title>
     <url>/gallery/FantasyRealm116/</url>
     <content><![CDATA[<table>
@@ -3516,6 +3470,52 @@
         </div><div class="flex-item">
             <a href="https://modpack.top/pro/Fantasy Realm/Fantasy Realm V8汉化.zip">
                 <img src="/images/file-download-line.svg" alt="download">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fantasy Realm 1.18</title>
+    <url>/gallery/FantasyRealm118/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">VM-Team</td>
+<td align="center">v3</td>
+<td align="center">1.18.2-Forge</td>
+</tr>
+</tbody></table>
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://space.bilibili.com/2085089798">
+                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/fantasy-realm">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/497.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://github.com/VM-Chinese-translate-group/fantasy-realm">
+                <img src="/images/github-fill.svg" alt="github">
             </a>
         </div>
 </div>
@@ -3839,58 +3839,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HarvestBlock</title>
-    <url>/gallery/HarvestBlock/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">hujtt</td>
-<td align="center">1.0.7</td>
-<td align="center">1.12.2-Forge</td>
-</tr>
-</tbody></table>
-<div style="text-align: center; color: red;">支持直接下载</div>
-
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://space.bilibili.com/346623115">
-                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/harvestblock">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/130.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://github.com/CFPAOrg/Modpack-GuideBook-i18n/pull/144">
-                <img src="/images/github-fill.svg" alt="github">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://modpack.top/pro/HarvestBlock/HarvestBlock-CN-1.0.7.rar">
-                <img src="/images/file-download-line.svg" alt="download">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GregBlock</title>
     <url>/gallery/GregBlock/</url>
     <content><![CDATA[<table>
@@ -3929,6 +3877,58 @@
             </a>
         </div><div class="flex-item">
             <a href="https://modpack.top/pro/Greg Block/Greg Block-2.2.1-windows.zip">
+                <img src="/images/file-download-line.svg" alt="download">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HarvestBlock</title>
+    <url>/gallery/HarvestBlock/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">hujtt</td>
+<td align="center">1.0.7</td>
+<td align="center">1.12.2-Forge</td>
+</tr>
+</tbody></table>
+<div style="text-align: center; color: red;">支持直接下载</div>
+
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://space.bilibili.com/346623115">
+                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/harvestblock">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/130.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://github.com/CFPAOrg/Modpack-GuideBook-i18n/pull/144">
+                <img src="/images/github-fill.svg" alt="github">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://modpack.top/pro/HarvestBlock/HarvestBlock-CN-1.0.7.rar">
                 <img src="/images/file-download-line.svg" alt="download">
             </a>
         </div>
@@ -4585,48 +4585,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Mechanical Mastery</title>
-    <url>/gallery/MechanicalMastery/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">晓阳</td>
-<td align="center">r1.0.0</td>
-<td align="center">1.18.2-Forge</td>
-</tr>
-</tbody></table>
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://space.bilibili.com/26327418">
-                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/mechanical-mastery">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/516.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Medieval MC [FABRIC] - MMC1</title>
     <url>/gallery/MedievalMCFABRIC-MMC1/</url>
     <content><![CDATA[<table>
@@ -4660,6 +4618,48 @@
         </div><div class="flex-item">
             <a href="https://github.com/VM-Chinese-translate-group/MMC-Chinese">
                 <img src="/images/github-fill.svg" alt="github">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mechanical Mastery</title>
+    <url>/gallery/MechanicalMastery/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">晓阳</td>
+<td align="center">r1.0.0</td>
+<td align="center">1.18.2-Forge</td>
+</tr>
+</tbody></table>
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://space.bilibili.com/26327418">
+                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/mechanical-mastery">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/516.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
             </a>
         </div>
 </div>
@@ -4819,48 +4819,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Multiblock Madness</title>
-    <url>/gallery/MultiblockMadness/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">纯纯的Mala</td>
-<td align="center">3.2.3</td>
-<td align="center">1.12.2-Forge</td>
-</tr>
-</tbody></table>
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://space.bilibili.com/37599420">
-                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/multiblock-madness">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/237.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Multiblock Madness 2</title>
     <url>/gallery/MultiblockMadness2/</url>
     <content><![CDATA[<table>
@@ -4889,6 +4847,48 @@
             </a>
         </div><div class="flex-item">
             <a href="https://www.mcmod.cn/modpack/583.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Multiblock Madness</title>
+    <url>/gallery/MultiblockMadness/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">纯纯的Mala</td>
+<td align="center">3.2.3</td>
+<td align="center">1.12.2-Forge</td>
+</tr>
+</tbody></table>
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://space.bilibili.com/37599420">
+                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/multiblock-madness">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/237.html">
                 <img src="/images/mcmod.svg" alt="mcmod">
             </a>
         </div>
@@ -5475,48 +5475,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Project Ozone 3 A New Way Forward</title>
-    <url>/gallery/ProjectOzone3ANewWayForward/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">给我带双份老鸭煲</td>
-<td align="center">3.3.61</td>
-<td align="center">1.12.2-Forge</td>
-</tr>
-</tbody></table>
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://space.bilibili.com/10068010">
-                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/project-ozone-3-a-new-way-forward">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/18.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Project Isothermal Expert</title>
     <url>/gallery/ProjectIsothermalExpert/</url>
     <content><![CDATA[<table>
@@ -5545,6 +5503,48 @@
             </a>
         </div><div class="flex-item">
             <a href="https://www.mcmod.cn/modpack/440.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Project Ozone 3 A New Way Forward</title>
+    <url>/gallery/ProjectOzone3ANewWayForward/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">给我带双份老鸭煲</td>
+<td align="center">3.3.61</td>
+<td align="center">1.12.2-Forge</td>
+</tr>
+</tbody></table>
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://space.bilibili.com/10068010">
+                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/project-ozone-3-a-new-way-forward">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/18.html">
                 <img src="/images/mcmod.svg" alt="mcmod">
             </a>
         </div>
@@ -5705,52 +5705,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Roguelike Adventures and Dungeons</title>
-    <url>/gallery/RoguelikeAdventuresandDungeons/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">VM-Team</td>
-<td align="center">1.53</td>
-<td align="center">1.12.2-Forge</td>
-</tr>
-</tbody></table>
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://space.bilibili.com/2085089798">
-                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/roguelike-adventures-and-dungeons">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/28.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://github.com/VM-Chinese-translate-group/Roguelike-Adventures-and-Dungeons">
-                <img src="/images/github-fill.svg" alt="github">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Restrict Skyblock</title>
     <url>/gallery/RestrictSkyblock/</url>
     <content><![CDATA[<table>
@@ -5794,6 +5748,52 @@
         </div><div class="flex-item">
             <a href="https://modpack.top/pro/anyijun/Restrict Skyblock/汉化Restrict Skyblock 2.5.zip">
                 <img src="/images/file-download-line.svg" alt="download">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Roguelike Adventures and Dungeons</title>
+    <url>/gallery/RoguelikeAdventuresandDungeons/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">VM-Team</td>
+<td align="center">1.53</td>
+<td align="center">1.12.2-Forge</td>
+</tr>
+</tbody></table>
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://space.bilibili.com/2085089798">
+                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/roguelike-adventures-and-dungeons">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/28.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://github.com/VM-Chinese-translate-group/Roguelike-Adventures-and-Dungeons">
+                <img src="/images/github-fill.svg" alt="github">
             </a>
         </div>
 </div>
@@ -5953,58 +5953,6 @@
       </tags>
   </entry>
   <entry>
-    <title>SevTech: Ages</title>
-    <url>/gallery/SevTechAges/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">iMusynx(CFPA-Team)</td>
-<td align="center">3.2.1</td>
-<td align="center">1.12.2-Forge</td>
-</tr>
-</tbody></table>
-<div style="text-align: center; color: red;">支持直接下载</div>
-
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/sevtech-ages">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/33.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://github.com/CFPAOrg/Modpack-GuideBook-i18n">
-                <img src="/images/github-fill.svg" alt="github">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://cfpa.site/">
-                <img src="/images/cfpa.svg" alt="cfpa">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://modpack.top/pro/SevTech Ages/SevTech Ages-3.2.1-windows.zip">
-                <img src="/images/file-download-line.svg" alt="download">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Seaopolis 2</title>
     <url>/gallery/Seaopolis2/</url>
     <content><![CDATA[<table>
@@ -6081,6 +6029,58 @@
             </a>
         </div><div class="flex-item">
             <a href="https://modpack.top/pro/Sevtech Age of the Sky/Sevtech Age of the Sky-CN-3.2.1.rar">
+                <img src="/images/file-download-line.svg" alt="download">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SevTech: Ages</title>
+    <url>/gallery/SevTechAges/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">iMusynx(CFPA-Team)</td>
+<td align="center">3.2.1</td>
+<td align="center">1.12.2-Forge</td>
+</tr>
+</tbody></table>
+<div style="text-align: center; color: red;">支持直接下载</div>
+
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/sevtech-ages">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/33.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://github.com/CFPAOrg/Modpack-GuideBook-i18n">
+                <img src="/images/github-fill.svg" alt="github">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://cfpa.site/">
+                <img src="/images/cfpa.svg" alt="cfpa">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://modpack.top/pro/SevTech Ages/SevTech Ages-3.2.1-windows.zip">
                 <img src="/images/file-download-line.svg" alt="download">
             </a>
         </div>
@@ -6201,6 +6201,54 @@
       </tags>
   </entry>
   <entry>
+    <title>Sky Research</title>
+    <url>/gallery/SkyResearch/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">枫灵枭</td>
+<td align="center">1.15</td>
+<td align="center">1.16.5-Forge</td>
+</tr>
+</tbody></table>
+<div style="text-align: center; color: red;">支持直接下载</div>
+
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://space.bilibili.com/294869233">
+                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/sky-research">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/469.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://modpack.top/pro/Sky Research/Sky Research-CN-1.15.7z">
+                <img src="/images/file-download-line.svg" alt="download">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Skyopolis 4</title>
     <url>/gallery/Skyopolis4/</url>
     <content><![CDATA[<table>
@@ -6239,54 +6287,6 @@
             </a>
         </div><div class="flex-item">
             <a href="https://modpack.top/pro/anyijun/Skyopolis 4/Skyopolis 4 (7.3)汉化20210406.zip">
-                <img src="/images/file-download-line.svg" alt="download">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Sky Research</title>
-    <url>/gallery/SkyResearch/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">枫灵枭</td>
-<td align="center">1.15</td>
-<td align="center">1.16.5-Forge</td>
-</tr>
-</tbody></table>
-<div style="text-align: center; color: red;">支持直接下载</div>
-
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://space.bilibili.com/294869233">
-                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/sky-research">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/469.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://modpack.top/pro/Sky Research/Sky Research-CN-1.15.7z">
                 <img src="/images/file-download-line.svg" alt="download">
             </a>
         </div>
@@ -6451,6 +6451,48 @@
       </tags>
   </entry>
   <entry>
+    <title>Stacia Expert</title>
+    <url>/gallery/StaciaExpert/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">作者</th>
+<th align="center">汉化版本</th>
+<th align="center">整合包版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">给我带双份老鸭煲</td>
+<td align="center">1.10.6</td>
+<td align="center">1.16.5-Forge</td>
+</tr>
+</tbody></table>
+<hr>
+<div class="flex-container">
+    <div class="flex-item">
+            <a href="https://space.bilibili.com/10068010">
+                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.curseforge.com/minecraft/modpacks/stacia-expert">
+                <img src="/images/curseforge.svg" alt="curseforge">
+            </a>
+        </div><div class="flex-item">
+            <a href="https://www.mcmod.cn/modpack/241.html">
+                <img src="/images/mcmod.svg" alt="mcmod">
+            </a>
+        </div>
+</div>
+]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
+      <tags>
+        <tag>空岛</tag>
+        <tag>任务</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Staged Learning</title>
     <url>/gallery/StagedLearning/</url>
     <content><![CDATA[<table>
@@ -6490,48 +6532,6 @@
         </div><div class="flex-item">
             <a href="https://modpack.top/pro/anyijun/Staged-Learning/汉化补丁 Staged-Learning-2.1.0.rar">
                 <img src="/images/file-download-line.svg" alt="download">
-            </a>
-        </div>
-</div>
-]]></content>
-      <categories>
-        <category>gallery</category>
-      </categories>
-      <tags>
-        <tag>空岛</tag>
-        <tag>任务</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Stacia Expert</title>
-    <url>/gallery/StaciaExpert/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">作者</th>
-<th align="center">汉化版本</th>
-<th align="center">整合包版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">给我带双份老鸭煲</td>
-<td align="center">1.10.6</td>
-<td align="center">1.16.5-Forge</td>
-</tr>
-</tbody></table>
-<hr>
-<div class="flex-container">
-    <div class="flex-item">
-            <a href="https://space.bilibili.com/10068010">
-                <img src="/images/bilibili-line-blue.svg" alt="bilibili">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.curseforge.com/minecraft/modpacks/stacia-expert">
-                <img src="/images/curseforge.svg" alt="curseforge">
-            </a>
-        </div><div class="flex-item">
-            <a href="https://www.mcmod.cn/modpack/241.html">
-                <img src="/images/mcmod.svg" alt="mcmod">
             </a>
         </div>
 </div>

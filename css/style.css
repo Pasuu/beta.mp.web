@@ -549,9 +549,12 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .profile .profile-content .profile-body {
   margin-top: 0;
-  margin-bottom: 2rem;
 }
 .profile .profile-content .profile-text {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.profile .profile-content .profile-text1 {
   margin-top: 0;
   margin-bottom: 2rem;
 }
@@ -570,6 +573,13 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .profile .profile-content .profile-text {
   color: #f00;
+}
+.profile .profile-content .profile-text1 {
+  font-family: 'Inter', 'Noto Sans SC', helvetica, arial;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #373633;
 }
 .profile .profile-content .profile-link {
   margin-top: 0;
