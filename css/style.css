@@ -551,6 +551,10 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-top: 0;
   margin-bottom: 2rem;
 }
+.profile .profile-content .profile-text {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
 .profile .profile-content .profile-title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -563,6 +567,9 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 400;
   line-height: 1.5rem;
   color: #373633;
+}
+.profile .profile-content .profile-text {
+  color: #f00;
 }
 .profile .profile-content .profile-link {
   margin-top: 0;
