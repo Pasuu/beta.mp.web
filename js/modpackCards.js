@@ -6,6 +6,19 @@ function generateModpackCards(modpacks) {
         const tags = data.link.tags.split(',').map(tag => tag.trim());
         const tagElements = tags.map(tag => `<span class="tag">${tag}</span>`).join('');
         
+        let downloadBtn = '';
+        if (data.isdownload && data.link.download) {
+            downloadBtn = `
+                <a href="down/${data.link.download}" class="link-btn" download>
+                    <i class="fas fa-download"></i> 下载
+                </a>
+            `;
+        } else if (data.isdownload) {
+            downloadBtn = `<div class="download-available"><i class="fas fa-download"></i> 可下载资源</div>`;
+        } else {
+            downloadBtn = `<div class="download-not-available"><i class="fas fa-times-circle"></i> 无下载资源</div>`;
+        }
+        
         const card = document.createElement('div');
         card.className = 'modpack-card';
         card.innerHTML = `
@@ -23,12 +36,11 @@ function generateModpackCards(modpacks) {
                     ${tagElements}
                 </div>
                 
-                ${data.isdownload ? 
-                    '<div class="download-available"><i class="fas fa-download"></i> 可下载资源</div>' : 
-                    '<div class="download-not-available"><i class="fas fa-times-circle"></i> 无下载资源</div>'
-                }
+                ${downloadBtn}
                 
                 <div class="modpack-links">
+                    ${downloadBtn.includes('link-btn') ? downloadBtn : ''}
+                    
                     ${data.link.curseforge ? 
                         `<a href="https://www.curseforge.com/minecraft/modpacks/${data.link.curseforge}" class="link-btn" target="_blank">
                             <i class="fab fa-cuttlefish"></i> CurseForge
