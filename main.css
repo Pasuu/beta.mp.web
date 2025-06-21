@@ -255,6 +255,10 @@ main {
     font-size: 0.8em;
 }
 
+.modpack-links .download-btn {
+    grid-column: 1 / -1;
+}
+
 .link-btn {
     flex: 1;
     min-width: 120px;

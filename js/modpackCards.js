@@ -6,17 +6,16 @@ function generateModpackCards(modpacks) {
         const tags = data.link.tags.split(',').map(tag => tag.trim());
         const tagElements = tags.map(tag => `<span class="tag">${tag}</span>`).join('');
         
-        let downloadBtn = '';
+        let downloadHTML = '';
         if (data.isdownload && data.link.download) {
-            downloadBtn = `
-                <a href="down/${data.link.download}" class="link-btn" download>
-                    <i class="fas fa-download"></i> 下载
-                </a>
-            `;
+          downloadHTML = `
+            <a href="down/${data.link.download}" class="link-btn download-btn" download>
+              <i class="fas fa-download"></i> 下载
+            </a>`;
         } else if (data.isdownload) {
-            downloadBtn = `<div class="download-available"><i class="fas fa-download"></i> 可下载资源</div>`;
+          downloadHTML = `<div class="download-available"><i class="fas fa-download"></i> 可下载资源</div>`;
         } else {
-            downloadBtn = `<div class="download-not-available"><i class="fas fa-times-circle"></i> 无下载资源</div>`;
+          downloadHTML = `<div class="download-not-available"><i class="fas fa-times-circle"></i> 无下载资源</div>`;
         }
         
         const card = document.createElement('div');
