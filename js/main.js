@@ -3,7 +3,7 @@ window.onload = function() {
     container.innerHTML = `
         <div class="loading">
             <i class="fas fa-spinner"></i>
-            <p>正在加载模组包数据...</p>
+            <p>正在加载整合包数据...</p>
         </div>
     `;
     
@@ -18,11 +18,11 @@ window.onload = function() {
             initializeApp(data);
         })
         .catch(error => {
-            console.error('加载模组包数据失败:', error);
+            console.error('加载整合包数据失败:', error);
             container.innerHTML = `
                 <div class="loading">
                     <i class="fas fa-exclamation-triangle"></i>
-                    <p>加载模组包数据失败，请刷新页面重试</p>
+                    <p>加载整合包数据失败，请刷新页面重试</p>
                     <p>${error.message}</p>
                 </div>
             `;
