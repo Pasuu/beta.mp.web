@@ -3,5 +3,6 @@ function initializeApp(modpacks) {
     generateModpackCards(modpacks);
     updateStats(modpacks);
     setupSearch(modpacks);
-    setupFilters(modpacks);
+    generateFilterButtons(modpacks);
+    setupFilters();
 }
