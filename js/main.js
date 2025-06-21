@@ -1,6 +1,5 @@
 window.onload = function() {
-    // 显示加载状态
-    const container = document.getElementById('modpacksContainer');
+  const container = document.getElementById('modpacksContainer');
     container.innerHTML = `
         <div class="loading">
             <i class="fas fa-spinner"></i>
@@ -8,7 +7,6 @@ window.onload = function() {
         </div>
     `;
     
-    // 从外部JSON文件加载数据
     fetch('modpacks.json')
         .then(response => {
             if (!response.ok) {
@@ -17,11 +15,9 @@ window.onload = function() {
             return response.json();
         })
         .then(data => {
-            // 成功加载数据后初始化应用
             initializeApp(data);
         })
         .catch(error => {
-            // 处理错误情况
             console.error('加载模组包数据失败:', error);
             container.innerHTML = `
                 <div class="loading">
@@ -32,3 +28,15 @@ window.onload = function() {
             `;
         });
 };
+
+// 评论
+const icon = document.getElementById('comment-icon');
+const lvContainer = document.getElementById('lv-container');
+
+icon.addEventListener('click', () => {
+  if (lvContainer.style.display === 'none' || lvContainer.style.display === '') {
+    lvContainer.style.display = 'block';
+  } else {
+    lvContainer.style.display = 'none';
+  }
+});

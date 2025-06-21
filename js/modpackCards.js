@@ -39,30 +39,86 @@ function generateModpackCards(modpacks) {
                 ${downloadBtn}
                 
 <div class="modpack-links">
-            ${data.link.curseforge ? 
-                `<a href="https://www.curseforge.com/minecraft/modpacks/${data.link.curseforge}" class="link-btn" target="_blank">
-                     <img src="img/curseforge.svg" alt="curseforge" class="icon"> CurseForge
-                </a>` : ''
-            }
-            
-            ${data.link.mcmod ? 
-                `<a href="https://www.mcmod.cn/modpack/${data.link.mcmod}.html" class="link-btn" target="_blank">
-                    <img src="img/mcmod.svg" alt="MC百科" class="icon"> MC百科
-                </a>` : ''
-            }
-            
-            ${data.link.github ? 
-                `<a href="https://github.com/${data.link.github}" class="link-btn" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>` : ''
-            }
-            
-            ${data.link.bilibili ? 
-                `<a href="https://space.bilibili.com/${data.link.bilibili}" class="link-btn" target="_blank">
-                    <i class="fab fa-bilibili"></i> B站
-                </a>` : ''
-            }
-        </div>
+    ${data.link.curseforge ? 
+        `<a href="https://www.curseforge.com/minecraft/modpacks/${data.link.curseforge}" class="link-btn" target="_blank">
+            <img src="img/curseforge.svg" alt="CurseForge" class="icon"> CurseForge
+        </a>` : ''
+    }
+
+    ${data.link.mcmod ? 
+        `<a href="https://www.mcmod.cn/modpack/${data.link.mcmod}.html" class="link-btn" target="_blank">
+            <img src="img/mcmod.svg" alt="MC百科" class="icon"> MC百科
+        </a>` : ''
+    }
+
+    ${data.link.github ? 
+        `<a href="https://github.com/${data.link.github}" class="link-btn" target="_blank">
+            <i class="fab fa-github icon"></i> GitHub
+        </a>` : ''
+    }
+
+    ${data.link.bilibili ? 
+        `<a href="https://space.bilibili.com/${data.link.bilibili}" class="link-btn" target="_blank">
+            <img src="img/bilibili-line-blue.svg" alt="B站主页" class="icon"> B站主页
+        </a>` : ''
+    }
+
+    ${data.link.bilibilidwred ? 
+        `<a href="https://www.bilibili.com/read/${data.link.bilibilidwred}" class="link-btn" target="_blank">
+            <img src="img/bilibili-line-red.svg" alt="B站文章红" class="icon"> B站文章
+        </a>` : ''
+    }
+
+    ${data.link.bilibilidwyellow ? 
+        `<a href="https://www.bilibili.com/read/${data.link.bilibilidwyellow}" class="link-btn" target="_blank">
+            <img src="img/bilibili-line-yellow.svg" alt="B站文章黄" class="icon"> B站文章
+        </a>` : ''
+    }
+
+    ${data.link.bilibilidwvideo ? 
+        `<a href="https://www.bilibili.com/video/${data.link.bilibilidwvideo}" class="link-btn" target="_blank">
+            <img src="img/bilibili-line-red.svg" alt="B站视频" class="icon"> B站视频
+        </a>` : ''
+    }
+
+    ${data.link.anyijun ? 
+        `<a href="https://anyijun.com/" class="link-btn" target="_blank">
+            <img src="img/anyijun.svg" alt="安逸君" class="icon"> 安逸君
+        </a>` : ''
+    }
+
+    ${data.link.CFPAOrg ? 
+        `<a href="https://cfpa.site/" class="link-btn" target="_blank">
+            <img src="img/cfpa.svg" alt="CFPA" class="icon"> CFPA
+        </a>` : ''
+    }
+
+    ${data.link.gtnh ? 
+        `<a href="https://gtnh.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5" class="link-btn" target="_blank">
+            <img src="img/gtnh.svg" alt="GTNH" class="icon"> GTNH
+        </a>` : ''
+    }
+
+    ${data.link.VM ? 
+        `<a href="https://vmct-cn.top/${data.link.VM}" class="link-btn" target="_blank">
+            <img src="img/vm.svg" alt="VM项目" class="icon"> VM项目
+        </a>` : ''
+    }
+
+    ${data.link.VM0 ? 
+        `<a href="https://vmct-cn.top/" class="link-btn" target="_blank">
+            <img src="img/vm.svg" alt="VM主页" class="icon"> VM主页
+        </a>` : ''
+    }
+
+    ${data.link.baidupan ? 
+        `<a href="https://pan.baidu.com/s/${data.link.baidupan}" class="link-btn" target="_blank">
+            <img src="img/baiduyun.svg" alt="百度网盘" class="icon"> 百度网盘
+        </a>` : ''
+    }
+
+</div>
+
         `;
         
         container.appendChild(card);
