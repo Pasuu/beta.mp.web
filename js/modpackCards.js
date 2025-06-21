@@ -38,34 +38,31 @@ function generateModpackCards(modpacks) {
                 
                 ${downloadBtn}
                 
-                <div class="modpack-links">
-                    ${downloadBtn.includes('link-btn') ? downloadBtn : ''}
-                    
-                    ${data.link.curseforge ? 
-                        `<a href="https://www.curseforge.com/minecraft/modpacks/${data.link.curseforge}" class="link-btn" target="_blank">
-                            <i class="fab fa-cuttlefish"></i> CurseForge
-                        </a>` : ''
-                    }
-                    
-                    ${data.link.mcmod ? 
-                        `<a href="https://www.mcmod.cn/modpack/${data.link.mcmod}.html" class="link-btn" target="_blank">
-                            <i class="fas fa-book"></i> MC百科
-                        </a>` : ''
-                    }
-                    
-                    ${data.link.github ? 
-                        `<a href="https://github.com/${data.link.github}" class="link-btn" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>` : ''
-                    }
-                    
-                    ${data.link.bilibili ? 
-                        `<a href="https://space.bilibili.com/${data.link.bilibili}" class="link-btn" target="_blank">
-                            <i class="fab fa-bilibili"></i> B站
-                        </a>` : ''
-                    }
-                </div>
-            </div>
+<div class="modpack-links">
+            ${data.link.curseforge ? 
+                `<a href="https://www.curseforge.com/minecraft/modpacks/${data.link.curseforge}" class="link-btn" target="_blank">
+                     <img src="img/curseforge.svg" alt="curseforge" class="icon"> CurseForge
+                </a>` : ''
+            }
+            
+            ${data.link.mcmod ? 
+                `<a href="https://www.mcmod.cn/modpack/${data.link.mcmod}.html" class="link-btn" target="_blank">
+                    <img src="img/mcmod.svg" alt="MC百科" class="icon"> MC百科
+                </a>` : ''
+            }
+            
+            ${data.link.github ? 
+                `<a href="https://github.com/${data.link.github}" class="link-btn" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>` : ''
+            }
+            
+            ${data.link.bilibili ? 
+                `<a href="https://space.bilibili.com/${data.link.bilibili}" class="link-btn" target="_blank">
+                    <i class="fab fa-bilibili"></i> B站
+                </a>` : ''
+            }
+        </div>
         `;
         
         container.appendChild(card);

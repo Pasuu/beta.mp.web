@@ -338,3 +338,25 @@ footer {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* 添加折叠功能样式 */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 40px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.filters.expanded {
+    max-height: 500px; 
+}
+
+/* MC百科图标 */
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
