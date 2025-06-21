@@ -10,24 +10,21 @@ function generateFilterButtons(modpacks) {
         packTags.forEach(tag => tags.add(tag));
     });
 
-
     Array.from(versions).sort().reverse().forEach(version => {
         const btn = document.createElement('button');
         btn.className = 'filter-btn';
-        btn.setAttribute('data-filter', version);
+        btn.setAttribute('data-filter', `version:${version}`);
         btn.textContent = version;
         filtersContainer.appendChild(btn);
     });
 
-
     Array.from(tags).sort().forEach(tag => {
         const btn = document.createElement('button');
         btn.className = 'filter-btn';
-        btn.setAttribute('data-filter', tag);
+        btn.setAttribute('data-filter', `tag:${tag}`);
         btn.textContent = tag;
         filtersContainer.appendChild(btn);
     });
-
 
     const toggleBtn = document.getElementById('toggleFilters');
     toggleBtn.addEventListener('click', function() {
