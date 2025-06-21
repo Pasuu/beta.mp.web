@@ -31,4 +31,17 @@ window.onload = function() {
                 </div>
             `;
         });
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const scrollY = window.scrollY;
+    
+    if (scrollY > 100) {
+        header.classList.add('hidden');
+        document.querySelector('.tags-container').classList.add('collapsed');
+    } else {
+        header.classList.remove('hidden');
+        document.querySelector('.tags-container').classList.remove('collapsed');
+    }
+});
 };

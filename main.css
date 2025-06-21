@@ -234,9 +234,25 @@ main {
 }
 
 .modpack-links {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 10px;
-    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* 下载按钮特殊样式 */
+.download-btn {
+    grid-column: 1 / -1; /* 跨整行 */
+    position: relative;
+}
+
+.download-count {
+    position: absolute;
+    right: 10px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 0 6px;
+    font-size: 0.8em;
 }
 
 .link-btn {
@@ -337,4 +353,29 @@ footer {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* 滚动隐藏效果 */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sticky-header.hidden {
+    transform: translateY(-100%);
+}
+
+/* 标签容器 */
+.tags-container {
+    transition: all 0.3s ease;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.tags-container.collapsed {
+    max-height: 0;
+    opacity: 0;
 }
