@@ -10,6 +10,21 @@ function generateFilterButtons(modpacks) {
         packTags.forEach(tag => tags.add(tag));
     });
 
+
+    filtersContainer.innerHTML = '';
+    
+    const allBtn = document.createElement('button');
+    allBtn.className = 'filter-btn active';
+    allBtn.setAttribute('data-filter', 'all');
+    allBtn.textContent = '全部模组包';
+    filtersContainer.appendChild(allBtn);
+    
+    const downloadBtn = document.createElement('button');
+    downloadBtn.className = 'filter-btn';
+    downloadBtn.setAttribute('data-filter', 'download');
+    downloadBtn.textContent = '可下载';
+    filtersContainer.appendChild(downloadBtn);
+    
     Array.from(versions).sort().reverse().forEach(version => {
         const btn = document.createElement('button');
         btn.className = 'filter-btn';
@@ -25,6 +40,7 @@ function generateFilterButtons(modpacks) {
         btn.textContent = tag;
         filtersContainer.appendChild(btn);
     });
+
 
     const toggleBtn = document.getElementById('toggleFilters');
     toggleBtn.addEventListener('click', function() {

@@ -16,11 +16,10 @@ function setupFilters() {
                 filterBtns.forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
             } 
-
             else {
                 document.querySelector('.filter-btn[data-filter="all"]').classList.remove('active');
                 document.querySelector('.filter-btn[data-filter="download"]').classList.remove('active');
-
+                
                 this.classList.toggle('active');
                 
                 if (this.classList.contains('active')) {
@@ -41,32 +40,38 @@ function applyFilters() {
     cards.forEach(card => {
         let shouldShow = true;
         
-
         if (activeFilters.has('all')) {
             shouldShow = true;
-        } else if (activeFilters.has('download')) {
+        } 
+        else if (activeFilters.has('download')) {
             const isDownload = card.querySelector('.download-available') || 
                               card.querySelector('a[download]');
-            shouldShow = isDownload;
+            shouldShow = isDownload ? true : false;
         } 
-
         else if (activeFilters.size > 0) {
             shouldShow = false;
             const tags = card.querySelector('.modpack-tags').textContent;
             const version = card.querySelector('.version').textContent;
             
-   
+            let matchesAll = true;
             for (const filter of activeFilters) {
-                const [type, value] = filter.split(':');
-                
-                if ((type === 'tag' && tags.includes(value)) ||
-                    (type === 'version' && version.includes(value))) {
-                    shouldShow = true;
-                } else {
-                    shouldShow = false;
-                    break; 
+                if (filter.startsWith('version:')) {
+                    const versionValue = filter.split(':')[1];
+                    if (!version.includes(versionValue)) {
+                        matchesAll = false;
+                        break;
+                    }
+                } 
+                else if (filter.startsWith('tag:')) {
+                    const tagValue = filter.split(':')[1];
+                    if (!tags.includes(tagValue)) {
+                        matchesAll = false;
+                        break;
+                    }
                 }
             }
+            
+            shouldShow = matchesAll;
         }
         
         card.style.display = shouldShow ? 'block' : 'none';
