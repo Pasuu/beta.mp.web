@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft 模组包汉化中心</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-cubes logo-icon"></i>
+                <div>
+                    <h1>Minecraft 模组包汉化中心</h1>
+                    <p>探索最全面的中文模组包资源，体验精彩的整合包世界</p>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="搜索模组包名称、标签或版本...">
+                </div>
+                
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">全部模组包</button>
+                    <button class="filter-btn" data-filter="download">可下载</button>
+                    <button class="filter-btn" data-filter="1.12.2">1.12.2</button>
+                    <button class="filter-btn" data-filter="1.16.5">1.16.5</button>
+                    <button class="filter-btn" data-filter="1.18.2">1.18.2</button>
+                    <button class="filter-btn" data-filter="任务">任务型</button>
+                    <button class="filter-btn" data-filter="科技">科技</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="totalModpacks">178</h3>
+                <p>模组包总数</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="downloadable">156</h3>
+                <p>可下载资源</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="teams">26</h3>
+                <p>汉化团队</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="versions">15</h3>
+                <p>不同版本</p>
+            </div>
+        </div>
+        
+        <div class="modpacks-grid" id="modpacksContainer">
+            <div class="loading">
+                <i class="fas fa-spinner"></i>
+                <p>正在加载模组包数据...</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 Minecraft Modpack 汉化中心 | 本网站仅用于展示模组包信息，所有资源版权归原作者所有</p>
+    </footer>
+
+    <script src="js/modpackCards.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

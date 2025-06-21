@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a3a, #0d1b2a);
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+header {
+    background: rgba(10, 20, 30, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 20px 5%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+.logo h1 {
+    font-size: 2.2rem;
+    background: linear-gradient(to right, #4CAF50, #8BC34A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.logo p {
+    color: #a0a0a0;
+    font-size: 1rem;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-container {
+    flex-grow: 1;
+    min-width: 250px;
+    position: relative;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border-radius: 30px;
+    border: none;
+    background: rgba(30, 40, 50, 0.7);
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8BC34A;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: rgba(40, 50, 60, 0.7);
+    border: 1px solid #4CAF50;
+    color: #e0e0e0;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #4CAF50;
+    color: white;
+}
+
+main {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.stats {
+    background: rgba(30, 40, 50, 0.5);
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card {
+    background: rgba(40, 50, 60, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 150px;
+    text-align: center;
+    flex: 1;
+}
+
+.stat-card h3 {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+.modpacks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.modpack-card {
+    background: rgba(30, 40, 50, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.modpack-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(76, 175, 80, 0.5);
+}
+
+.card-header {
+    position: relative;
+}
+
+.modpack-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.modpack-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(10, 20, 30, 0.9));
+    padding: 20px 15px 10px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.modpack-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.version {
+    background: rgba(76, 175, 80, 0.2);
+    color: #8BC34A;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+.team {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    max-width: 60%;
+    text-align: right;
+}
+
+.modpack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: rgba(40, 50, 60, 0.9);
+    color: #8BC34A;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.modpack-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.link-btn {
+    flex: 1;
+    min-width: 120px;
+    background: rgba(40, 50, 60, 0.9);
+    color: #e0e0e0;
+    border: 1px solid #4CAF50;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.link-btn:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+.download-available {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.download-not-available {
+    display: inline-block;
+    background: #f44336;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px 0;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .logo {
+        flex-direction: column;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filters {
+        justify-content: center;
+    }
+    
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-card {
+        width: 100%;
+    }
+    
+    .modpacks-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #8BC34A;
+}
+
+.loading i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
