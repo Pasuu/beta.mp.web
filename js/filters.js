@@ -1,4 +1,4 @@
-function setupFilters() {
+function setupFilters(modpacks) {
     const filterBtns = document.querySelectorAll('.filter-btn');
     
     filterBtns.forEach(btn => {
@@ -18,20 +18,13 @@ function setupFilters() {
                 }
                 
                 if (filter === 'download') {
-                    const isDownload = card.querySelector('.download-available') || 
-                                      card.querySelector('a[download]');
+                    const isDownload = card.querySelector('.download-available');
                     card.style.display = isDownload ? 'block' : 'none';
                     return;
                 }
                 
-                const tags = card.querySelector('.modpack-tags').textContent;
-                const version = card.querySelector('.version').textContent;
-                
-                if (tags.includes(filter) || version.includes(filter)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+                const tags = card.querySelector('.modpack-tags').textContent.toLowerCase();
+                card.style.display = tags.includes(filter.toLowerCase()) ? 'block' : 'none';
             });
         });
     });
