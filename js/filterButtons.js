@@ -4,8 +4,9 @@ function generateFilterButtons(modpacks) {
     const tags = new Set();
 
     Object.values(modpacks).forEach(pack => {
-        const version = pack.gversion.split('-')[0];
+        const version = pack.gversion;
         versions.add(version);
+        
         const packTags = pack.link.tags.split(',').map(tag => tag.trim());
         packTags.forEach(tag => tags.add(tag));
     });
@@ -24,21 +25,51 @@ function generateFilterButtons(modpacks) {
     downloadBtn.textContent = '可下载';
     filtersContainer.appendChild(downloadBtn);
 
-    Array.from(versions).sort().reverse().forEach(version => {
-        const btn = document.createElement('button');
-        btn.className = 'filter-btn';
-        btn.setAttribute('data-filter', `version:${version}`);
-        btn.textContent = version;
-        filtersContainer.appendChild(btn);
-    });
+    Array.from(versions)
+        .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
+        .forEach(version => {
+            const btn = document.createElement('button');
+            btn.className = 'filter-btn';
+            btn.setAttribute('data-filter', `version:${version}`);
+            btn.textContent = version;
+            filtersContainer.appendChild(btn);
+        });
 
-    Array.from(tags).sort().forEach(tag => {
-        const btn = document.createElement('button');
-        btn.className = 'filter-btn';
-        btn.setAttribute('data-filter', `tag:${tag}`);
-        btn.textContent = tag;
-        filtersContainer.appendChild(btn);
-    });
+    Array.from(tags)
+        .sort()
+        .forEach(tag => {
+            const btn = document.createElement('button');
+            btn.className = 'filter-btn';
+            btn.setAttribute('data-filter', `tag:${tag}`);
+            btn.textContent = tag;
+            filtersContainer.appendChild(btn);
+        });
 
     setupFilters();
+}
+
+function applyFilters() {
+    const cards = document.querySelectorAll('.modpack-card');
+
+    cards.forEach(card => {
+        let shouldShow = true;
+
+        if (activeFilter === 'all') {
+            shouldShow = true;
+        } else if (activeFilter === 'download') {
+            const isDownload = card.querySelector('.download-available') ||
+                               card.querySelector('a[download]');
+            shouldShow = !!isDownload;
+        } else if (activeFilter?.startsWith('version:')) {
+            const versionValue = activeFilter.split(':')[1];
+            const version = card.querySelector('.version')?.textContent || '';
+            shouldShow = version === versionValue;
+        } else if (activeFilter?.startsWith('tag:')) {
+            const tagValue = activeFilter.split(':')[1];
+            const tags = card.querySelector('.modpack-tags')?.textContent || '';
+            shouldShow = tags.includes(tagValue);
+        }
+
+        card.style.display = shouldShow ? 'block' : 'none';
+    });
 }

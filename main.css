@@ -417,3 +417,16 @@ footer {
           #comment-icon:hover {
             background-color: #0056b3;
           }
+
+.i18n-version {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+.i18n-version span:first-child {
+    font-weight: bold;
+    color: #8BC34A;
+}

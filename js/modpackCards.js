@@ -19,6 +19,12 @@ function generateModpackCards(modpacks) {
             downloadBtn = `<div class="download-not-available"><i class="fas fa-times-circle"></i> 无下载资源</div>`;
         }
         
+        const i18nVersion = `
+            <div class="i18n-version">
+                <span>汉化版本:</span>
+                <span>${data.i18version}</span>
+            </div>
+        `;
         const card = document.createElement('div');
         card.className = 'modpack-card';
         card.innerHTML = `
@@ -32,6 +38,8 @@ function generateModpackCards(modpacks) {
                     <span class="team">${data.i18team}</span>
                 </div>
                 
+                ${i18nVersion}
+                
                 <div class="modpack-tags">
                     ${tagElements}
                 </div>
@@ -42,6 +50,12 @@ function generateModpackCards(modpacks) {
     ${data.link.curseforge ? 
         `<a href="https://www.curseforge.com/minecraft/modpacks/${data.link.curseforge}" class="link-btn" target="_blank">
             <img src="img/curseforge.svg" alt="CurseForge" class="icon"> CurseForge
+        </a>` : ''
+    }
+
+        ${data.link.ftb ? 
+        `<a href="https://www.feed-the-beast.com/modpacks/${data.link.ftb}" class="link-btn" target="_blank">
+            <img src="img/ftb.svg" alt="FTB" class="icon"> FTB
         </a>` : ''
     }
 
