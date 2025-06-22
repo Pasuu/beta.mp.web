@@ -19,6 +19,18 @@ if "!name!"=="" (
     goto input_name
 )
 
+:: 清理文件名（替换特殊字符）
+set "clean_name=!name!"
+set "clean_name=!clean_name: =_!"
+set "clean_name=!clean_name:/=_!"
+set "clean_name=!clean_name:\=_!"
+set "clean_name=!clean_name::=_!"
+set "clean_name=!clean_name:?=_!"
+set "clean_name=!clean_name:<=_!"
+set "clean_name=!clean_name:>=_!"
+set "clean_name=!clean_name:|=_!"
+set "clean_name=!clean_name:"=_!"
+
 :: 获取图片URL
 :input_img
 set /p "img=图片URL: "
@@ -34,6 +46,18 @@ if "!i18version!"=="" (
     echo 错误：汉化版本不能为空！
     goto input_i18version
 )
+
+:: 清理汉化版本字符串
+set "clean_i18version=!i18version!"
+set "clean_i18version=!clean_i18version: =_!"
+set "clean_i18version=!clean_i18version:/=_!"
+set "clean_i18version=!clean_i18version:\=_!"
+set "clean_i18version=!clean_i18version::=_!"
+set "clean_i18version=!clean_i18version:?=_!"
+set "clean_i18version=!clean_i18version:<=_!"
+set "clean_i18version=!clean_i18version:>=_!"
+set "clean_i18version=!clean_i18version:|=_!"
+set "clean_i18version=!clean_i18version:"=_!"
 
 :: 获取游戏版本
 :input_gversion
@@ -54,12 +78,64 @@ if "!i18team!"=="" (
 :: 获取可下载状态
 :ask_download
 set /p "isdownload=可下载? (y/n): "
-if /i "!isdownload!"=="y" set "download=true" & goto ask_tags
+if /i "!isdownload!"=="y" (
+    set "download=true"
+    goto get_zipfile
+)
 if /i "!isdownload!"=="n" set "download=false" & goto ask_tags
 echo 错误：请输入 y 或 n
 goto ask_download
 
-:: 获取标签
+:: 获取ZIP文件路径（拖拽功能）
+:get_zipfile
+echo.
+echo 请将ZIP文件拖拽到此处，然后按回车:
+set /p "zipfile="
+if "!zipfile!"=="" (
+    echo 错误：未提供文件路径！
+    goto get_zipfile
+)
+
+:: 移除路径引号
+set "zipfile=!zipfile:"=!"
+
+:: 检查文件是否存在
+if not exist "!zipfile!" (
+    echo 错误：文件不存在！
+    goto get_zipfile
+)
+
+:: 检查文件扩展名
+if /i not "!zipfile:~-4!"==".zip" (
+    echo 错误：文件必须是ZIP格式！
+    goto get_zipfile
+)
+
+:: 创建下载目录
+set "target_dir=down\!clean_name!"
+if not exist "!target_dir!\" (
+    mkdir "!target_dir!" >nul 2>&1
+    if errorlevel 1 (
+        echo 错误：无法创建目录 !target_dir!
+        pause
+        exit /b 1
+    )
+)
+
+:: 复制并重命名ZIP文件（使用名称+汉化版本格式）
+set "target_file=!target_dir!\!clean_name!-!clean_i18version!.zip"
+copy /Y "!zipfile!" "!target_file!" >nul
+if errorlevel 1 (
+    echo 错误：文件复制失败！
+    pause
+    exit /b 1
+)
+
+:: 设置下载路径（名称+汉化版本格式）
+set "download_path=!clean_name!/!clean_name!-!clean_i18version!.zip"
+echo ✅ 文件已保存到: !target_file!
+echo.
+
 :ask_tags
 set /p "tags=标签(逗号分隔): "
 if "!tags!"=="" (
@@ -67,7 +143,7 @@ if "!tags!"=="" (
     goto ask_tags
 )
 
-:: 获取额外链接信息
+
 echo.
 echo === 添加其他链接信息（可选）===
 echo 如果不需要某个链接，请直接按回车跳过
@@ -79,18 +155,6 @@ set /p "modrinth=Modrinth 链接: "
 set /p "official=官方网站链接: "
 set /p "discord=Discord 链接: "
 set /p "other=其他链接: "
-
-:: 清理文件名（替换特殊字符）
-set "clean_name=!name!"
-set "clean_name=!clean_name: =_!"
-set "clean_name=!clean_name:/=_!"
-set "clean_name=!clean_name:\=_!"
-set "clean_name=!clean_name::=_!"
-set "clean_name=!clean_name:?=_!"
-set "clean_name=!clean_name:<=_!"
-set "clean_name=!clean_name:>=_!"
-set "clean_name=!clean_name:|=_!"
-set "clean_name=!clean_name:"=_!"
 
 :: 确保目录存在
 if not exist "modpacks" (
@@ -104,10 +168,8 @@ if not exist "modpacks" (
 
 set "filename=modpacks\!clean_name!.json"
 
-:: 创建JSON文件（带格式缩进）
 (
     echo {
-    echo   "name": "!name!",
     echo   "img": "!img!",
     echo   "i18version": "!i18version!",
     echo   "gversion": "!gversion!",
@@ -117,7 +179,12 @@ set "filename=modpacks\!clean_name!.json"
 ) > "!filename!"
 
 :: 添加标签（必需项）
->> "!filename!" echo     "tags": "!tags!"
+>> "!filename!" echo     "tags": "!tags!" 
+
+:: 添加下载路径（如果可下载）
+if !download! equ true (
+    >> "!filename!" echo     ,"download": "!download_path!"
+)
 
 :: 添加额外链接（如果有提供）
 if not "!curseforge!"=="" (
