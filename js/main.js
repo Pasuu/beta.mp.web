@@ -1,4 +1,4 @@
-const USE_SPLIT_FILES = true; // 设为true启用拆分文件加载
+const USE_SPLIT_FILES = false; // 设为true启用拆分文件加载
 
 window.onload = function() {
   const container = document.getElementById('modpacksContainer');
