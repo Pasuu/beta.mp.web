@@ -21,7 +21,7 @@ jobs:
         fetch-depth: 0
 
     - name: Setup Node.js
-      uses: actions/supersetup-node@v4
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
 
@@ -31,14 +31,14 @@ jobs:
     - name: Build modpacks.json
       run: node build.js
       
-    - name: Generate index file  # 新增步骤
+    - name: Generate index file
       run: node generate_index.js
         
     - name: Commit changes
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@users.noreply.github.com"
-        git add modpacks.json modpacks/index.json  # 添加索引文件
+        git add modpacks.json modpacks/index.json
         git diff --quiet && git diff --staged --quiet || git commit -m "自动更新整合包数据和索引"
         git push
       env:
