@@ -13,7 +13,7 @@ color 0A
 
 :: 获取整合包名称
 :input_name
-set /p "name=整合包完整名称: "
+set /p "name=整合包完整名称(Curseforge的名称): "
 if "!name!"=="" (
     echo 错误：名称不能为空！
     goto input_name
@@ -146,15 +146,106 @@ if "!tags!"=="" (
 
 echo.
 echo === 添加其他链接信息（可选）===
-echo 如果不需要某个链接，请直接按回车跳过
+echo 请输入完整链接，系统将自动提取所需部分
 echo.
 
-set /p "curseforge=CurseForge 链接: "
+set /p "curseforge_full=CurseForge 链接: "
+set /p "modrinth_full=Modrinth 链接: "
+set /p "mcmod_full=MCMod 链接: "
+set /p "bilibili_full=Bilibili 用户链接: "
+set /p "bilibiliopus_full=Bilibili 专栏链接: "
+set /p "bilibilidwvideo_full=Bilibili 视频链接: "
+set /p "baidupan_full=百度网盘 链接: "
 set /p "github=GitHub 链接: "
-set /p "modrinth=Modrinth 链接: "
 set /p "official=官方网站链接: "
-set /p "discord=Discord 链接: "
 set /p "other=其他链接: "
+
+:: 从完整链接中提取所需部分
+if not "!curseforge_full!"=="" (
+    for %%A in ("!curseforge_full!") do (
+        set "last_part=%%~nxA"
+        set "curseforge=!last_part:/=!"
+    )
+)
+
+if not "!modrinth_full!"=="" (
+    for %%A in ("!modrinth_full!") do (
+        set "last_part=%%~nxA"
+        set "modrinth=!last_part:/=!"
+    )
+)
+
+if not "!mcmod_full!"=="" (
+    for %%A in ("!mcmod_full!") do (
+        set "last_part=%%~nxA"
+        set "mcmod=!last_part:.html=!"
+        set "mcmod=!mcmod:/=!"
+    )
+)
+
+if not "!bilibili_full!"=="" (
+    for %%A in ("!bilibili_full!") do (
+        set "last_part=%%~nxA"
+        set "bilibili=!last_part:/=!"
+        set "bilibili=!bilibili:?=!"
+    )
+)
+
+:: GitHub特殊处理
+if not "!github!"=="" (
+    set "github=!github:https://github.com/=!"
+    set "github=!github:http://github.com/=!"
+    set "github=!github:.git=!"
+    set "github=!github:/tree/=!"
+    set "github=!github:/blob/=!"
+    set "github=!github:/raw/=!"
+    if "!github:~-1!"=="/" set "github=!github:~0,-1!"
+)
+
+:: Bilibili专栏提取
+if not "!bilibiliopus_full!"=="" (
+    set "bilibiliopus=!bilibiliopus_full!"
+    set "bilibiliopus=!bilibiliopus:https://www.bilibili.com/opus/=!"
+    set "bilibiliopus=!bilibiliopus:http://www.bilibili.com/opus/=!"
+    set "bilibiliopus=!bilibiliopus:https://bilibili.com/opus/=!"
+    set "bilibiliopus=!bilibiliopus:http://bilibili.com/opus/=!"
+    for /f "delims=?" %%B in ("!bilibiliopus!") do set "bilibiliopus=%%B"
+)
+
+:: Bilibili视频提取
+if not "!bilibilidwvideo_full!"=="" (
+    set "bilibilidwvideo=!bilibilidwvideo_full!"
+    set "bilibilidwvideo=!bilibilidwvideo:https://www.bilibili.com/video/=!"
+    set "bilibilidwvideo=!bilibilidwvideo:http://www.bilibili.com/video/=!"
+    set "bilibilidwvideo=!bilibilidwvideo:https://bilibili.com/video/=!"
+    set "bilibilidwvideo=!bilibilidwvideo:http://bilibili.com/video/=!"
+    for /f "delims=/" %%B in ("!bilibilidwvideo!") do set "bilibilidwvideo=%%B"
+    set "bilibilidwvideo=!bilibilidwvideo:?=!"
+)
+
+:: 百度网盘提取 - 优化版本
+if not "!baidupan_full!"=="" (
+    set "baidupan=!baidupan_full!"
+    
+    :: 处理标准分享链接格式
+    if "!baidupan:s/=!" neq "!baidupan!" (
+        set "baidupan=!baidupan:*s/=!"
+    )
+    
+    :: 处理分享初始化链接格式
+    if "!baidupan:share/initsurl=!" neq "!baidupan!" (
+        set "baidupan=!baidupan:*share/initsurl=!"
+    )
+    
+    :: 移除URL参数分隔符之前的内容
+    for /f "delims=#&" %%B in ("!baidupan!") do set "baidupan=%%B"
+    
+    :: 移除多余参数
+    set "baidupan=!baidupan:https:=!"
+    set "baidupan=!baidupan:http:=!"
+    set "baidupan=!baidupan:pan.baidu.com/=!"
+    set "baidupan=!baidupan:?list/path=!"
+)
 
 :: 确保目录存在
 if not exist "modpacks" (
@@ -186,21 +277,35 @@ if !download! equ true (
     >> "!filename!" echo     ,"download": "!download_path!"
 )
 
-:: 添加额外链接（如果有提供）
+:: 添加提取后的链接部分
 if not "!curseforge!"=="" (
     >> "!filename!" echo     ,"curseforge": "!curseforge!"
-)
-if not "!github!"=="" (
-    >> "!filename!" echo     ,"github": "!github!"
 )
 if not "!modrinth!"=="" (
     >> "!filename!" echo     ,"modrinth": "!modrinth!"
 )
+if not "!mcmod!"=="" (
+    >> "!filename!" echo     ,"mcmod": "!mcmod!"
+)
+if not "!bilibili!"=="" (
+    >> "!filename!" echo     ,"bilibili": "!bilibili!"
+)
+if not "!bilibiliopus!"=="" (
+    >> "!filename!" echo     ,"bilibiliopus": "!bilibiliopus!"
+)
+if not "!bilibilidwvideo!"=="" (
+    >> "!filename!" echo     ,"bilibilidwvideo": "!bilibilidwvideo!"
+)
+if not "!baidupan!"=="" (
+    >> "!filename!" echo     ,"baidupan": "!baidupan!"
+)
+
+:: 添加其他链接（完整URL）
+if not "!github!"=="" (
+    >> "!filename!" echo     ,"github": "!github!"
+)
 if not "!official!"=="" (
     >> "!filename!" echo     ,"official": "!official!"
-)
-if not "!discord!"=="" (
-    >> "!filename!" echo     ,"discord": "!discord!"
 )
 if not "!other!"=="" (
     >> "!filename!" echo     ,"other": "!other!"

@@ -1,7 +1,7 @@
 function generateModpackCards(modpacks) {
     const container = document.getElementById('modpacksContainer');
     container.innerHTML = '';
-    
+
     Object.entries(modpacks).forEach(([name, data]) => {
         const tags = data.link.tags.split(',').map(tag => tag.trim());
         const tagElements = tags.map(tag => `<span class="tag">${tag}</span>`).join('');
@@ -25,13 +25,18 @@ function generateModpackCards(modpacks) {
                 <span>${data.i18version}</span>
             </div>
         `;
-        const card = document.createElement('div');
+const card = document.createElement('div');
         card.className = 'modpack-card';
         card.innerHTML = `
             <div class="card-header">
-                <img src="${data.img}" alt="${name}" class="modpack-img" onerror="this.src='https://via.placeholder.com/400x180/2c3e50/ffffff?text=Modpack+Image'">
+                <img src="img/placeholder.png" 
+                     data-src="${data.img}" 
+                     alt="${name}" 
+                     class="modpack-img lazy"
+                     onerror="this.src='https://via.placeholder.com/400x180/2c3e50/ffffff?text=Modpack+Image'">
                 <h3 class="modpack-name">${name}</h3>
             </div>
+
             <div class="card-content">
                 <div class="modpack-meta">
                     <span class="version">${data.gversion}</span>
@@ -59,6 +64,12 @@ function generateModpackCards(modpacks) {
         </a>` : ''
     }
 
+        ${data.link.modrinth ? 
+        `<a href="https://www.modrinth.com/modpack/${data.link.modrinth}" class="link-btn" target="_blank">
+            <img src="img/modrinth.svg" alt="Modrinth" class="icon"> Modrinth
+        </a>` : ''
+    }
+
     ${data.link.mcmod ? 
         `<a href="https://www.mcmod.cn/modpack/${data.link.mcmod}.html" class="link-btn" target="_blank">
             <img src="img/mcmod.svg" alt="MC百科" class="icon"> MC百科
@@ -79,6 +90,12 @@ function generateModpackCards(modpacks) {
 
     ${data.link.bilibilidwred ? 
         `<a href="https://www.bilibili.com/read/${data.link.bilibilidwred}" class="link-btn" target="_blank">
+            <img src="img/bilibili-line-red.svg" alt="B站文章红" class="icon"> B站文章
+        </a>` : ''
+    }
+
+    ${data.link.bilibiliopus ? 
+        `<a href="https://www.bilibili.com/opus/${data.link.bilibiliopus}" class="link-btn" target="_blank">
             <img src="img/bilibili-line-red.svg" alt="B站文章红" class="icon"> B站文章
         </a>` : ''
     }
@@ -136,5 +153,29 @@ function generateModpackCards(modpacks) {
         `;
         
         container.appendChild(card);
+    });
+
+    
+    // 初始化懒加载
+    initLazyLoad();
+}
+
+function initLazyLoad() {
+    const lazyImages = document.querySelectorAll('.lazy');
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '0px 0px 100px 0px' // 提前100px加载
+    });
+
+    lazyImages.forEach(img => {
+        observer.observe(img);
     });
 }
