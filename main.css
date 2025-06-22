@@ -430,36 +430,3 @@ footer {
     font-weight: bold;
     color: #8BC34A;
 }
-
-
-.progress-bar {
-    width: 80%;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    margin: 15px auto 0;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background: linear-gradient(90deg, #4CAF50, #8BC34A);
-    width: 0%;
-    transition: width 0.3s ease;
-}
-
-.reload-btn {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-top: 15px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
-}
-
-.reload-btn:hover {
-    background: #3d8b40;
-}

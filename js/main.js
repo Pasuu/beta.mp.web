@@ -1,4 +1,4 @@
-const USE_SPLIT_FILES = false;; // 设为true启用拆分文件加载
+const USE_SPLIT_FILES = true; // 设为true启用拆分文件加载
 
 window.onload = function() {
   const container = document.getElementById('modpacksContainer');
@@ -101,48 +101,6 @@ if (USE_SPLIT_FILES) {
       });
   };
 
-  // 添加缓存版本控制
-const CACHE_VERSION = 1;
-const CACHE_KEY = `modpacks-data-v${CACHE_VERSION}`;
-
-async function loadWithCache() {
-    // 尝试从缓存读取
-    const cachedData = localStorage.getItem(CACHE_KEY);
-    if (cachedData) {
-        return JSON.parse(cachedData);
-    }
-    
-    // 从网络加载
-    const response = await fetch('modpacks.min.json');
-    const data = await response.json();
-    
-    // 缓存数据（100小时）
-    localStorage.setItem(CACHE_KEY, JSON.stringify(data));
-    setTimeout(() => {
-        localStorage.removeItem(CACHE_KEY);
-    }, 360000000); // 100小时有效期
-    
-    return data;
-}
-
-function updateProgress(loaded, total) {
-    const progress = document.getElementById('loadingProgress');
-    if (!progress) {
-        const loader = document.querySelector('.loading');
-        loader.innerHTML += `
-            <div class="progress-container">
-                <div id="loadingProgress" class="progress-bar"></div>
-            </div>
-            <p>已加载 ${loaded}/${total} 个整合包</p>
-        `;
-    } else {
-        progress.style.width = `${(loaded / total) * 100}%`;
-        progress.nextElementSibling.textContent = `已加载 ${loaded}/${total} 个整合包`;
-    }
-}
-
-
   // 启动加载流程
   loadData();
 };
-
