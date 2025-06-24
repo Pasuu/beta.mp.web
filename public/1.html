@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>文件上传测试</h1>
+  
+  <!-- 简单上传表单 -->
+  <form id="uploadForm">
+    <input type="file" id="fileInput">
+    <button type="submit">上传文件</button>
+  </form>
+  
+  <div id="result"></div>
+  
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+      
+      if (!file) {
+        alert('请选择文件');
+        return;
+      }
+      
+      try {
+        // 创建 FormData 并添加文件
+        const formData = new FormData();
+        formData.append('file', file);
+        
+        // 发送到 API 端点
+        const response = await fetch('/api/blob', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        document.getElementById('result').innerHTML = `
+          <p>上传成功！</p>
+          <p>文件URL: <a href="${result.url}" target="_blank">${result.url}</a></p>
+          <p>大小: ${Math.round(result.size / 1024)} KB</p>
+        `;
+      } catch (error) {
+        console.error('上传失败:', error);
+        document.getElementById('result').innerHTML = '上传失败，请查看控制台日志';
+      }
+    });
+  </script>
+</body>
+</html>

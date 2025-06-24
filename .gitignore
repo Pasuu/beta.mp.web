@@ -1,0 +1,11 @@
+# 环境文件
+.env.local
+.env.development
+.env.production
+.env
+
+# 其他忽略项
+.vercel
+.next
+node_modules
+dist

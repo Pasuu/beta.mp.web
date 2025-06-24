@@ -13,5 +13,17 @@
         }
       ]
     }
-  ]
+  ],
+  "rewrites": [
+    {
+      "source": "/api/blob/(.*)",
+      "destination": "/api/blob/route?path=$1"
+    }
+  ],
+  "functions": {
+    "api/blob/**/*.js": {
+      "maxDuration": 30,
+      "memory": 3008
+    }
+  }
 }

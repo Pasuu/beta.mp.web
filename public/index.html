@@ -21,10 +21,14 @@
                 </div>
                 
                 <div class="controls">
+                    
                 <div class="search-container">
                     <i class="fas fa-search search-icon"></i>
                     <input type="text" id="searchInput" placeholder="搜索包名称、标签或版本...">
                 </div>
+
+
+
                     <div class="filters">
                         <button class="filter-btn active" data-filter="all">全部</button>
                         <button class="filter-btn" data-filter="download">可下载</button>
@@ -32,6 +36,15 @@
                 </div>
             </div>
         </div>
+            <div id="upload-container">
+        <label for="file-upload" class="upload-btn">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>上传汉化包</span>
+        </label>
+        <input type="file" id="file-upload" accept=".zip,.rar,.7z,.json,.txt" hidden>
+    </div>
+
+    <div id="upload-status"></div>
     </header>
     
     <main>
@@ -96,5 +109,6 @@
 <script src="js/filters.js"></script>
 <script src="js/init.js"></script>
 <script src="js/main.js"></script>
+<script src="js/upload.js"></script>
 </body>
 </html> 
