@@ -47,29 +47,3 @@ function generateFilterButtons(modpacks) {
 
     setupFilters();
 }
-
-function applyFilters() {
-    const cards = document.querySelectorAll('.modpack-card');
-
-    cards.forEach(card => {
-        let shouldShow = true;
-
-        if (activeFilter === 'all') {
-            shouldShow = true;
-        } else if (activeFilter === 'download') {
-            const isDownload = card.querySelector('.download-available') ||
-                               card.querySelector('a[download]');
-            shouldShow = !!isDownload;
-        } else if (activeFilter?.startsWith('version:')) {
-            const versionValue = activeFilter.split(':')[1];
-            const version = card.querySelector('.version')?.textContent || '';
-            shouldShow = version === versionValue;
-        } else if (activeFilter?.startsWith('tag:')) {
-            const tagValue = activeFilter.split(':')[1];
-            const tags = card.querySelector('.modpack-tags')?.textContent || '';
-            shouldShow = tags.includes(tagValue);
-        }
-
-        card.style.display = shouldShow ? 'block' : 'none';
-    });
-}

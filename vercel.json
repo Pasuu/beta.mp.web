@@ -1,11 +1,17 @@
 {
-  "routes": [
+  "headers": [
     {
-      "src": "/modpacks(?:/.*)?",
-      "headers": {
-        "Cache-Control": "public, max-age=3600"
-      },
-      "continue": true
+      "source": "/modpacks(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=360000, stale-while-revalidate=60"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, max-age=864000"
+        }
+      ]
     }
   ]
 }

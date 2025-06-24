@@ -7,32 +7,29 @@
     <title>Minecraft 整合包汉化</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="main.css">
-
-
 </head>
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">
-                <i class="fas fa-cubes logo-icon"></i>
-                <div>
-                    <h1>Minecraft 整合包汉化</h1>
-                    <p>未经授权,不许转发</p>
+            <div class="header-row">
+                <div class="logo">
+                    <i class="fas fa-cubes logo-icon"></i>
+                    <div class="logo-text">
+                        <h1>Minecraft 整合包汉化</h1>
+                        <p>未经授权,不许转发</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="controls">
+                
+                <div class="controls">
                 <div class="search-container">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-search search-icon"></i>
                     <input type="text" id="searchInput" placeholder="搜索包名称、标签或版本...">
                 </div>
-                <div class="filters-wrapper">
-                <div class="filters">
-                    <button class="filter-btn active" data-filter="all">全部</button>
-                    <button class="filter-btn" data-filter="download">可下载</button>
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">全部</button>
+                        <button class="filter-btn" data-filter="download">可下载</button>
+                    </div>
                 </div>
-            </div>
-            </div>
             </div>
         </div>
     </header>
@@ -63,6 +60,10 @@
                 <p>正在加载汉化包数据...</p>
             </div>
         </div>
+
+        <div class="lazy-load-indicator" id="lazyLoadIndicator">
+    <i class="fas fa-spinner"></i> 正在加载更多整合包...
+</div>
         
         <div id="lv-container" data-id="city" data-uid="MTAyMC81ODc5NS8zNTI1Nw==">
             <script type="text/javascript">
@@ -96,4 +97,4 @@
 <script src="js/init.js"></script>
 <script src="js/main.js"></script>
 </body>
-</html>
+</html> 

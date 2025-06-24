@@ -116,7 +116,7 @@
       "mcmod": "478",
       "github": "ShaBaiTianCN/Andromeda-Automation",
       "anyijun": true,
-      "download": "anyijun/Andromeda-Automation/2.1-CN-Andromeda-Automation-7.6.1.zip",
+      "download": "Andromeda-Automation/2.1-CN-Andromeda-Automation-7.6.1.zip",
       "tags": "1.18.2,Forge,冒险,地图,科技,空岛,魔法"
     }
   },
@@ -188,7 +188,7 @@
       "bilibili": "628493139",
       "curseforge": "better-mc-skyblock",
       "VM0": true,
-      "download0": "bettermc skyblock/bettermc skyblock_v5.0汉化 by cat.rar",
+      "download": "bettermc skyblock/bettermc skyblock_v5.0汉化 by cat.rar",
       "tags": "1.16.5,Forge,PvP,任务,休闲,水槽,空岛"
     }
   },
@@ -308,7 +308,7 @@
       "mcmod": "460",
       "VM0": true,
       "baidupan": "1OI533N2IMHssFsoGm5o0lg?pwd=x068",
-      "download0": "vm/blackstone block/blackstone blockv1.0.4汉化补丁.zip",
+      "download": "blackstone block/blackstone blockv1.0.4汉化补丁.zip",
       "tags": "1.16.5,Forge,任务,大型,硬核,科技,空岛,魔法"
     }
   },
@@ -338,7 +338,7 @@
       "bilibili": "6575218",
       "curseforge": "calculator-skies",
       "anyijun": true,
-      "download": "anyijun/Calculator-Skies/Calculator-Skies_1.14.1-Hotfix_zh_cn.zip",
+      "download": "Calculator-Skies/Calculator-Skies_1.14.1-Hotfix_zh_cn.zip",
       "tags": "1.12.2,Forge,任务,科技,空岛,魔法"
     }
   },
@@ -367,7 +367,7 @@
       "mcmod": "493",
       "VM0": true,
       "baidupan": "1OI533N2IMHssFsoGm5o0lg?pwd=x068",
-      "download0": "vm/Caveopolis/Caveopolis4.1汉化补丁.zip",
+      "download": "Caveopolis/Caveopolis4.1汉化补丁.zip",
       "tags": "1.18.2,Forge,任务,科技,空岛"
     }
   },
@@ -399,7 +399,7 @@
       "mcmod": "529",
       "github": "ShaBaiTianCN/Chroma-Endless",
       "anyijun": true,
-      "download": "anyijun/Chroma-Endless/1.1-CN-Chroma-Endless-1.0.5.zip",
+      "download": "Chroma-Endless/1.1-CN-Chroma-Endless-1.0.5.zip",
       "tags": "1.16.5,Forge,任务,冒险,大型,硬核,科技,魔法"
     }
   },
@@ -446,7 +446,7 @@
       "mcmod": "314",
       "github": "ShaBaiTianCN/Chroma-Technology-2",
       "anyijun": true,
-      "download": "anyijun/Chroma-Technology-2/1.0-CN-Chroma-Technology-2-1.2.1.zip",
+      "download": "Chroma-Technology-2/1.0-CN-Chroma-Technology-2-1.2.1.zip",
       "tags": "1.16.5,Forge,任务,冒险,大型,硬核,科技,魔法"
     }
   },
@@ -462,7 +462,7 @@
       "mcmod": "30",
       "github": "CFPAOrg/Modpack-GuideBook-i18n",
       "anyijun": true,
-      "download": "anyijun/Compact-Claustrophobia/汉化补丁Compact-Claustrophobia-1.3.5.2.zip",
+      "download": "Compact-Claustrophobia/汉化补丁Compact-Claustrophobia-1.3.5.2.zip",
       "tags": "1.12.2,Forge,任务,地图,科技,空岛"
     }
   },
@@ -662,7 +662,7 @@
       "curseforge": "delivery-inc",
       "mcmod": "288",
       "anyijun": true,
-      "download": "anyijun/Delivery-Inc/汉化补丁 Delivery-Inc 1.0.24.zip",
+      "download": "Delivery-Inc/汉化补丁 Delivery-Inc 1.0.24.zip",
       "tags": "1.16.5,Forge,任务,科技,轻量"
     }
   },
@@ -718,7 +718,7 @@
       "mcmod": "503",
       "github": "ShaBaiTianCN/Encrypted_",
       "anyijun": true,
-      "download": "anyijun/Encrypted/Encrypted_汉化补丁V2.2.zip",
+      "download": "Encrypted/Encrypted_汉化补丁V2.2.zip",
       "tags": "1.18.2,Forge,任务,大型,科技,魔法"
     }
   },
@@ -899,7 +899,7 @@
       "mcmod": "293",
       "VM0": true,
       "baidupan": "1OI533N2IMHssFsoGm5o0lg?pwd=x068",
-      "download0": "vm/Feed the Singularity/Feed the Singularity1.11汉化.zip",
+      "download": "Feed the Singularity/Feed the Singularity1.11汉化.zip",
       "tags": "1.16.5,Forge,任务,休闲,科技,轻量"
     }
   },
@@ -962,7 +962,7 @@
       "mcmod": "568",
       "github": "ShaBaiTianCN/FTB-Inferno",
       "anyijun": true,
-      "download": "anyijun/FTB-Inferno/1.3-CN-FTB-Inferno-1.3.0.zip",
+      "download": "FTB-Inferno/1.3-CN-FTB-Inferno-1.3.0.zip",
       "tags": "1.18.2,Forge,任务,冒险,硬核,科技,魔法"
     }
   },
@@ -1156,7 +1156,7 @@
       "mcmod": "49",
       "github": "Wulian233/FTB-Sky-Odyssey-Translation",
       "VM0": true,
-      "download0": "vm/FTB Sky Odyssey/FTB-Sky-Odyssey-Translation--1.3.zip",
+      "download": "FTB Sky Odyssey/FTB-Sky-Odyssey-Translation--1.3.zip",
       "tags": "1.12.2,Forge,任务,休闲,冒险,科技,空岛,魔法"
     }
   },
@@ -1203,7 +1203,7 @@
       "mcmod": "403",
       "github": "ShaBaiTianCN/Greed-the-Resource-3-Factory",
       "anyijun": true,
-      "download": "anyijun/Greed-the-Resource-3-Factory/1.0-汉化补丁-Greed-the-Resource-3-Factory-V5.6.zip",
+      "download": "Greed-the-Resource-3-Factory/1.0-汉化补丁-Greed-the-Resource-3-Factory-V5.6.zip",
       "tags": "1.16.5,Forge,任务,冒险,大型,科技,魔法"
     }
   },
@@ -1294,7 +1294,7 @@
       "curseforge": "hungry-for-tech-2",
       "VM0": true,
       "baidupan": "1OI533N2IMHssFsoGm5o0lg?pwd=x068",
-      "download": "vm/Hungry For Tech 2/HungryForTech2汉化补丁v1.0.zip",
+      "download": "Hungry For Tech 2/HungryForTech2汉化补丁v1.0.zip",
       "tags": "1.20.1,Forge,任务,科技,空岛"
     }
   },
@@ -1309,170 +1309,9 @@
       "curseforge": "magic-ice-tech",
       "github": "VM-Chinese-translate-group/-ice-",
       "VM0": true,
-      "download": "vm/ice/【ice】ice整合包汉化补丁-VM汉化组-第一版.zip",
+      "download": "ice/【ice】ice整合包汉化补丁-VM汉化组-第一版.zip",
       "tags": "1.16.5,Forge,任务,科技,空岛,魔法"
     }
-  },
-  "Index": {
-    "generated": "2025-06-22T07:32:44.165Z",
-    "count": 155,
-    "files": [
-      "Aged.json",
-      "Age_of_Engineering.json",
-      "All_the_Mods_3_Expert_-_ATM3E.json",
-      "All_the_Mods_6_-_ATM6.json",
-      "All_the_Mods_7_-_To_the_Sky_-_atm7sky.json",
-      "All_the_Mods_8_-_ATM8.json",
-      "Amnesia.json",
-      "Andromeda_Automation.json",
-      "Antimatter_Chemistry.json",
-      "Astral_Magica.json",
-      "Astroblock.json",
-      "Astropolis.json",
-      "Better_MC_Skyblock.json",
-      "Better_MC_[FABRIC]_-_BMC1.json",
-      "Better_MC_[FORGE]_-_BMC1.json",
-      "Better_MC_[FORGE]_-_BMC2.json",
-      "Better_MC_[FORGE]_-_BMC3.json",
-      "Better_MC_[FORGE]_-_BMC4.json",
-      "Better_MC_[NEOFORGE]_-_BMC5.json",
-      "BigChadGuys_Plus_(w_Cobblemon!).json",
-      "Blackstone_Block.json",
-      "Bliss_-_a_peaceful-like_experience.json",
-      "Calculator_Skies.json",
-      "Calibry_Team_-_One_Chunk.json",
-      "Caveopolis_(Modpack).json",
-      "Chemical_Exchange.json",
-      "Chroma_Endless.json",
-      "Chroma_Endless_2.json",
-      "Chroma_Sky_2.json",
-      "Chroma_Technology_2.json",
-      "Compact_Claustrophobia.json",
-      "Cottage_Witch.json",
-      "Craft_to_Exile_2.json",
-      "Craft_to_Exile_[Dissonance].json",
-      "Craft_to_Exile_[Harmony].json",
-      "Create_101_Season_2.json",
-      "Create_Above_and_Beyond.json",
-      "Create_Arcane_Engineering.json",
-      "Create_Astral.json",
-      "Create_Stellar.json",
-      "Cryptopolis.json",
-      "DarkRPG_Fabric_-_RPG_with_Magic,_Origins_&_Quests.json",
-      "DawnCraft_-_An_Adventure_RPG_Modpack.json",
-      "DeceasedCraft_-_Modern_Zombie_Apocalypse.json",
-      "Delivery_Inc..json",
-      "Dimension_Hopper_The_Fall.json",
-      "Divine_Journey_2.json",
-      "Dreamcraft_[FABRIC].json",
-      "Encrypted_.json",
-      "Enigmatica_2_Expert_-_E2E.json",
-      "Enigmatica_6_-_E6.json",
-      "Enigmatica_6_Expert_-_E6E.json",
-      "Enigmatica_9_-_E9.json",
-      "Enigmatica_9_Expert_-_E9E.json",
-      "Evolution_of_the_Ages_2.json",
-      "Exoria.json",
-      "Fantasy_Realm_1.16.json",
-      "Fantasy_Realm_1.18.json",
-      "Farming_Valley.json",
-      "Feed_the_Factory.json",
-      "Feed_the_Singularity.json",
-      "FTB_Arcanum_Institute.json",
-      "FTB_Continuum.json",
-      "FTB_Genesis.json",
-      "FTB_Inferno.json",
-      "FTB_Interactions.json",
-      "FTB_Legend_of_the_Eyes.json",
-      "FTB_NeoTech.json",
-      "FTB_OceanBlock.json",
-      "FTB_Presents_Integration_by_Parts_DX.json",
-      "FTB_Presents_SkyFactory_3.json",
-      "FTB_Presents_Stoneblock_2.json",
-      "FTB_Pyramid_Reborn_3.0.json",
-      "FTB_Skies.json",
-      "FTB_Skies_Expert.json",
-      "FTB_SkyFactory_Challenges.json",
-      "FTB_Sky_Odyssey.json",
-      "FTB_StoneBlock_3.json",
-      "Glacial_Awakening.json",
-      "Greed_the_Resource_3_Factory.json",
-      "GregBlock.json",
-      "GregTech_Community_Pack.json",
-      "GT_New_Horizons.json",
-      "HarvestBlock.json",
-      "Heavens_of_Sorcery.json",
-      "Hungry_For_Tech_2.json",
-      "Ice.json",
-      "Infernal_Origins.json",
-      "Infernopolis.json",
-      "Infinity_Foundation.json",
-      "Invasion.json",
-      "Jetpack_Cat.json",
-      "Life_in_the_village_2.json",
-      "Life_in_the_village_3.json",
-      "Manufactio_2_-_Nuclear_Edition.json",
-      "Mass_Production.json",
-      "Material_Energy^5_Entity.json",
-      "MC_Eternal.json",
-      "Mechanical_Mastery.json",
-      "Medieval_MC_[FABRIC]_-_MMC1.json",
-      "Medieval_MC_[FORGE]_-_MMC4.json",
-      "Modern_Skyblock_3_Departed.json",
-      "Multiblock_Madness.json",
-      "Multiblock_Madness_2.json",
-      "MultiSkyBlock.json",
-      "Musketeer_-_One_for_All.json",
-      "Mystical_Block.json",
-      "Nomifactory.json",
-      "Nomifactory_CEu.json",
-      "Not_Too_Complicated_2.json",
-      "OBSIDA-TECH.json",
-      "Omnifactory.json",
-      "PixelGO_-_To_the_Sky.json",
-      "Plastek.json",
-      "Prey_An_Expansive_RPG_Nightmare.json",
-      "Primal_Skies.json",
-      "Project_Equivalence.json",
-      "Project_Isothermal_Expert.json",
-      "Project_Ozone_3_A_New_Way_Forward.json",
-      "Proletaria_Expert.json",
-      "Ragnamod_VII.json",
-      "Rebirth_of_the_Night_(RotN).json",
-      "Restrict_Skyblock.json",
-      "RLCraft.json",
-      "Roguelike_Adventures_and_Dungeons.json",
-      "Roguelike_Adventures_and_Dungeons_2.json",
-      "Rustic_Waters_II.json",
-      "Seaopolis.json",
-      "Seaopolis_2.json",
-      "Seaopolis_Submerged.json",
-      "SevTech_Ages.json",
-      "SevTech_Ages_of_the_Sky.json",
-      "SkyFactory_4.json",
-      "Skyopolis_4.json",
-      "Skyopolis_5.json",
-      "SkyT.json",
-      "Sky_Bees_2.json",
-      "Sky_Research.json",
-      "Space_Astronomy_2.json",
-      "Stacia_2_Expert.json",
-      "Stacia_Expert.json",
-      "Staged_Learning.json",
-      "Star_Factory.json",
-      "StoneBlock.json",
-      "Stone_Technology_Ultimate.json",
-      "Technological_Journey.json",
-      "Techopolis.json",
-      "Techopolis_2.json",
-      "The_Decursio_Project_-_Expert.json",
-      "The_Nuclear_Wasteland.json",
-      "TNP_Limitless_5_-_LL5.json",
-      "Ultimate_Alchemy.json",
-      "Ultimate_Progression.json",
-      "Vault_Hunters_3rd_Edition.json",
-      "Volcano_Block.json"
-    ]
   },
   "Infernal Origins": {
     "img": "https://media.forgecdn.net/avatars/904/711/638355105225386236.png",
@@ -1498,7 +1337,7 @@
       "bilibili": "6575218",
       "curseforge": "infernopolis",
       "anyijun": true,
-      "download": "anyijun/Infernopolis/Infernopolis_2.1_zh_cn.zip",
+      "download": "Infernopolis/Infernopolis_2.1_zh_cn.zip",
       "tags": "1.16.5,Forge,任务,冒险,空岛,魔法"
     }
   },
@@ -1514,7 +1353,7 @@
       "mcmod": "513",
       "VM0": true,
       "baidupan": "1OI533N2IMHssFsoGm5o0lg?pwd=x068",
-      "download0": "vm/Infinity Foundation/Infinity Foundation v2.0汉化补丁.zip",
+      "download": "Infinity Foundation/Infinity Foundation v2.0汉化补丁.zip",
       "tags": "1.18.2,Forge,任务,科技,空岛,轻量,魔法"
     }
   },
@@ -1546,7 +1385,7 @@
       "mcmod": "482",
       "github": "KlparetlR/Jetpack-Cat",
       "VM0": true,
-      "download": "vm/Jetpack Cat（喷气背包猫）汉化-5.1-KlparetlR-V2.4.0.zip",
+      "download": "Jetpack Cat/Jetpack Cat（喷气背包猫）汉化-5.1-KlparetlR-V2.4.0.zip",
       "tags": "1.16.5,Forge,任务,冒险,大型,建筑,硬核,科技"
     }
   },
@@ -1752,7 +1591,7 @@
       "mcmod": "683",
       "github": "VM-Chinese-translate-group/Musketeer-l10n-CN",
       "VM0": true,
-      "download": "vm/Musketeer/Musketeer-CN-For-beta7-0.1.2.zip",
+      "download": "Musketeer/Musketeer-CN-For-beta7-0.1.2.zip",
       "tags": "1.19.2,Forge,休闲,冒险,轻量"
     }
   },
@@ -1810,7 +1649,7 @@
       "curseforge": "not-too-complicated-2",
       "mcmod": "432",
       "anyijun": true,
-      "download": "anyijun/Not Too Complicated 2/汉化补丁Not Too Complicated 2-1.4.0(f1.0).zip",
+      "download": "Not Too Complicated 2/汉化补丁Not Too Complicated 2-1.4.0(f1.0).zip",
       "tags": "1.16.5,Forge,任务,冒险,大型,建筑,科技,魔法"
     }
   },
@@ -1953,7 +1792,7 @@
       "mcmod": "444",
       "github": "ShaBaiTianCN/Proletaria-Expert",
       "anyijun": true,
-      "download": "anyijun/Proletaria-Expert/1.1-CN-Proletaria-Expert-1.1.1.zip",
+      "download": "Proletaria-Expert/1.1-CN-Proletaria-Expert-1.1.1.zip",
       "tags": "1.16.5,Forge,任务,冒险,大型,硬核,科技,魔法"
     }
   },
@@ -1998,7 +1837,7 @@
       "mcmod": "452",
       "github": "ShaBaiTianCN/Restrict-Skyblock",
       "anyijun": true,
-      "download": "anyijun/Restrict Skyblock/汉化Restrict Skyblock 2.5.zip",
+      "download": "Restrict Skyblock/汉化Restrict Skyblock 2.5.zip",
       "tags": "1.16.5,Forge,任务,冒险,地图,大型,科技,魔法"
     }
   },
@@ -2014,18 +1853,6 @@
       "mcmod": "16",
       "download": "rlcraft/rlcraft-V2.9.3-CN.rar",
       "tags": "1.12.2,Forge,任务,冒险,大型,硬核"
-    }
-  },
-  "RLCraft Dregora": {
-    "img": "https://media.forgecdn.net/avatars/thumbnails/1100/111/64/64/638647210513856968.png",
-    "i18version": "v1.0.6b",
-    "gversion": "1.12.2-forge",
-    "i18team": "Ours_to",
-    "isdownload": true,
-    "link": {
-      "tags": "PVP,冒险,硬核,剧情",
-      "download": "RLCraft_Dregora/RLCraft_Dregora-v1.0.6b.zip",
-      "curseforge": "rlcraft-dregora"
     }
   },
   "Roguelike Adventures And Dungeons": {
@@ -2068,7 +1895,7 @@
       "curseforge": "rustic-waters-ii",
       "mcmod": "398",
       "anyijun": true,
-      "download": "anyijun/Rustic Waters II/任务书汉化Rustic Waters II 1.16.zip",
+      "download": "Rustic Waters II/任务书汉化Rustic Waters II 1.16.zip",
       "tags": "1.16.5,Forge,任务,冒险,科技,魔法"
     }
   },
@@ -2083,7 +1910,7 @@
       "curseforge": "seaopolis",
       "mcmod": "218",
       "anyijun": true,
-      "download": "anyijun/Seaopolis/Seaopolis_9.0_zh_cn.zip",
+      "download": "Seaopolis/Seaopolis_9.0_zh_cn.zip",
       "tags": "1.16.5,Forge,任务,冒险,科技,空岛"
     }
   },
@@ -2171,7 +1998,7 @@
       "curseforge": "skyopolis-4",
       "mcmod": "284",
       "anyijun": true,
-      "download": "anyijun/Skyopolis 4/Skyopolis 4 (7.3)汉化20210406.zip",
+      "download": "Skyopolis 4/Skyopolis 4 (7.3)汉化20210406.zip",
       "tags": "1.16.5,Forge,任务,硬核,科技,空岛,魔法"
     }
   },
@@ -2187,7 +2014,7 @@
       "mcmod": "445",
       "github": "ShaBaiTianCN/Skyopolis-5",
       "anyijun": true,
-      "download": "anyijun/Skyopolis-5/1.1-CN-Skyopolis-5-3.0.zip",
+      "download": "Skyopolis-5/1.1-CN-Skyopolis-5-3.0.zip",
       "tags": "1.18.2,Forge,任务,冒险,科技,空岛"
     }
   },
@@ -2216,7 +2043,7 @@
       "mcmod": "550",
       "VM0": true,
       "baidupan": "1OI533N2IMHssFsoGm5o0lg?pwd=x068",
-      "download0": "vm/Sky Bees 2/Sky Bees 2 1.4.1汉化补丁.zip",
+      "download": "Sky Bees 2/Sky Bees 2 1.4.1汉化补丁.zip",
       "tags": "1.16.5,Forge,任务,大型,科技,空岛,魔法"
     }
   },
@@ -2288,7 +2115,7 @@
       "curseforge": "staged-learning",
       "mcmod": "132",
       "anyijun": true,
-      "download": "anyijun/Staged-Learning/汉化补丁 Staged-Learning-2.1.0.rar",
+      "download": "Staged-Learning/汉化补丁 Staged-Learning-2.1.0.rar",
       "tags": "1.12.2,Forge,任务,科技"
     }
   },
@@ -2303,10 +2130,10 @@
       "curseforge": "star-factory",
       "mcmod": "140",
       "anyijun": true,
-      "download1": "anyijun/Star Factory/Star Factory-1.1.0.zip",
+      "download1": "Star Factory/Star Factory-1.1.0.zip",
       "VM0": true,
       "baidupan": "1OI533N2IMHssFsoGm5o0lg?pwd=x068",
-      "download0": "vm/Star Factory/Star Factory汉化.rar",
+      "download": "Star Factory/Star Factory汉化.rar",
       "tags": "1.12.2,Forge,任务,地图,空岛,轻量,魔法"
     }
   },
@@ -2407,7 +2234,7 @@
       "curseforge": "the-nuclear-wasteland",
       "mcmod": "251",
       "VM0": true,
-      "download0": "vm/The Nuclear Wasteland/核荒原0.2.5 橡树树苗汉化补丁.rar",
+      "download": "The Nuclear Wasteland/核荒原0.2.5 橡树树苗汉化补丁.rar",
       "tags": "1.12.2,Forge,冒险,大型,硬核"
     }
   },

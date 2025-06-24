@@ -24,48 +24,89 @@ header {
 
 
 .header-content {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 10px 0;
+}
+
+.header-row {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+    min-width: 250px;
 }
+
 
 .logo-icon {
     font-size: 2.5rem;
     color: #4CAF50;
 }
 
+.logo-text {
+    line-height: 1.2;
+}
+
 .logo h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     background: linear-gradient(to right, #4CAF50, #8BC34A);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .logo p {
     color: #a0a0a0;
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 .controls {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 15px;
+    flex-grow: 1;
+    max-width: 800px;
+    justify-content: flex-end;
 }
 
 .search-container {
+    position: relative;
     flex-grow: 1;
     min-width: 250px;
+    max-width: 400px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8BC34A;
+    z-index: 2;
+}
+
+
+.search-container input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border-radius: 30px;
+    border: none;
+    background: rgba(30, 40, 50, 0.7);
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: relative;
+    z-index: 1;
 }
 
 .search-container input {
@@ -89,9 +130,10 @@ header {
 
 .filters {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
 }
+
 
 .filter-btn {
     background: rgba(40, 50, 60, 0.7);
@@ -292,36 +334,55 @@ footer {
     
 }
 
-@media (max-width: 768px) {
-    .header-content {
-        text-align: center;
-        align-items: center;
+/* 移动端优化 */
+@media (max-width: 900px) {
+    .header-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
     }
     
     .logo {
+        justify-content: center;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    
+    .logo-text {
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
     
     .controls {
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+    }
+
+
+    .search-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* 小屏幕设备优化 */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo-icon {
+        font-size: 2rem;
+    }
+    
+    .search-container {
+        min-width: 100%;
     }
     
     .filters {
-        justify-content: center;
-    }
-    
-    .stats {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .stat-card {
         width: 100%;
-    }
-    
-    .modpacks-grid {
-        grid-template-columns: 1fr;
+        justify-content: center;
     }
 }
 
@@ -429,4 +490,62 @@ footer {
 .i18n-version span:first-child {
     font-weight: bold;
     color: #8BC34A;
+}
+
+
+/* 懒加载指示器 */
+.lazy-load-indicator {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 20px;
+    color: #8BC34A;
+    display: none;
+}
+
+/* 无结果提示 */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #8BC34A;
+}
+
+/* 渲染优化 */
+.modpacks-grid {
+    contain: strict layout;
+    will-change: transform;
+}
+
+.modpack-card {
+    will-change: transform, opacity;
+}
+
+/* 图片加载过渡 */
+.modpack-img {
+    background: linear-gradient(45deg, #1a2a3a, #0d1b2a);
+    transition: opacity 0.3s;
+}
+
+/* 加载动画 */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #8BC34A;
+    font-size: 1.2rem;
+}
+
+.modpack-img {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    background: linear-gradient(45deg, #1a2a3a, #0d1b2a);
+}
+
+.modpack-img.loaded {
+    opacity: 1;
 }

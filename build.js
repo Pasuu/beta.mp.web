@@ -2,16 +2,16 @@ const fs = require('fs');
 const path = require('path');
 
 const modpacksDir = './modpacks';
-const outputFile = './modpacks.json';
+const outputFile = './public/modpacks.json';
 
 const combined = {};
 
-// 读取所有整合包文件
+// 读取所有整合包文件，忽略 index.json
 fs.readdirSync(modpacksDir).forEach(file => {
-  if (path.extname(file) === '.json') {
+  if (path.extname(file) === '.json' && file !== 'index.json') {
     const filePath = path.join(modpacksDir, file);
     const modpackData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    
+
     // 从文件名还原原始名称
     const modpackName = file
       .replace('.json', '')
