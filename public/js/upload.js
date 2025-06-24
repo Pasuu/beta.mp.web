@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 处理文件上传
     async function handleFileUpload(file) {
-        // 检查文件大小 (最大4.5MB)
-        if (file.size > 4.5 * 1024 * 1024) {
-            showUploadStatus('文件大小超过4.5MB限制', 'error');
+        // 检查文件大小 (最大10MB)
+        if (file.size > 10 * 1024 * 1024) {
+            showUploadStatus('文件大小超过10MB限制', 'error');
             return;
         }
         
