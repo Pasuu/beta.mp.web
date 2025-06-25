@@ -4,10 +4,8 @@
   "description": "Minecraft Modpack Chinese Translations",
   "scripts": {
     "build": "node build.js",
+    
     "generate-index": "node generate_index.js"
   },
-  "license": "MIT",
-  "dependencies": {
-    "@vercel/blob": "^1.1.1"
-  }
+  "license": "MIT"
 }
