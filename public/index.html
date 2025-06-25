@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="blob-token" content="vercel_blob_rw_3NocmPfRyypijNlg_sEGN59p6U70YZDilss6QTC1ZAmEMz5">
     <link rel="icon" href="/logo.ico" />
     <title>Minecraft 整合包汉化</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -82,11 +83,6 @@
           <div id="comment-icon" title="打开评论">
             <i class="fa fa-comments"></i>
           </div>
-
-          <!-- 上传按钮 -->
-          <div id="upload-icon" title="上传汉化包">
-            <i class="fa fa-cloud-upload-alt"></i>
-          </div>
         
     </main>
     
@@ -94,202 +90,13 @@
         <p>Copyright © 2025 Pasuu by Modpack.top</p>
     </footer>
 
-    <!-- 上传模态框 -->
-    <div id="upload-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2><i class="fas fa-file-archive"></i> 上传汉化包</h2>
-            <p class="modal-subtitle">请上传压缩格式的汉化包文件 (.zip, .rar, .7z)</p>
-
-            <div class="upload-area" id="file-drop-area">
-                <div class="upload-icon">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                </div>
-                <p>拖放文件到此处 或</p>
-                <button class="select-file-btn">选择文件</button>
-                <input type="file" id="file-input" accept=".zip,.rar,.7z">
-                <p class="file-type-hint">支持格式: ZIP, RAR, 7Z</p>
-            </div>
-            
-            <div class="file-info" id="selected-file-info" style="display: none;">
-                <p><i class="fas fa-file-archive"></i> <span id="file-name"></span></p>
-                <p><i class="fas fa-weight-hanging"></i> <span id="file-size"></span></p>
-            </div>
-            
-            <div class="progress-container">
-                <div class="progress-bar" id="upload-progress"></div>
-                <div class="progress-text" id="progress-text">0%</div>
-            </div>
-            
-            <div class="modal-actions">
-                <button id="start-upload-btn" disabled>
-                    <i class="fas fa-upload"></i> 开始上传
-                </button>
-                <button id="cancel-upload-btn" class="cancel-btn">
-                    <i class="fas fa-times"></i> 取消
-                </button>
-            </div>
-            
-            <div class="upload-result" id="upload-result"></div>
-        </div>
-    </div>
-
 <script src="js/modpackCards.js"></script>
 <script src="js/stats.js"></script>
 <script src="js/search.js"></script>
 <script src="js/filterButtons.js"></script>
 <script src="js/filters.js"></script>
 <script src="js/init.js"></script>
-<script src="js/main.js"></script>
-<script type="module">
-    import { put } from 'https://esm.sh/@vercel/blob';
-    const BLOB_TOKEN = 'vercel_blob_rw_3NocmPfRyypijNlg_sEGN59p6U70YZDilss6QTC1ZAmEMz5';
-    const uploadIcon = document.getElementById('upload-icon');
-    const uploadModal = document.getElementById('upload-modal');
-    const closeBtn = document.querySelector('.close-btn');
-    const fileInput = document.getElementById('file-input');
-    const fileDropArea = document.getElementById('file-drop-area');
-    const startUploadBtn = document.getElementById('start-upload-btn');
-    const cancelUploadBtn = document.getElementById('cancel-upload-btn');
-    const fileNameDisplay = document.getElementById('file-name');
-    const fileSizeDisplay = document.getElementById('file-size');
-    const selectedFileInfo = document.getElementById('selected-file-info');
-    const uploadProgress = document.getElementById('upload-progress');
-    const progressText = document.getElementById('progress-text');
-    const uploadResult = document.getElementById('upload-result');
-    
-    let selectedFile = null;
-    
-    // 打开模态框
-    uploadIcon.addEventListener('click', () => {
-        uploadModal.style.display = 'block';
-    });
-    
-    // 关闭模态框
-    closeBtn.addEventListener('click', () => {
-        uploadModal.style.display = 'none';
-        resetUploadForm();
-    });
-    
-    // 点击模态框外部关闭
-    window.addEventListener('click', (e) => {
-        if (e.target === uploadModal) {
-            uploadModal.style.display = 'none';
-            resetUploadForm();
-        }
-    });
-    
-    // 取消上传
-    cancelUploadBtn.addEventListener('click', () => {
-        resetUploadForm();
-    });
-    
-    // 重置表单
-    function resetUploadForm() {
-        fileInput.value = '';
-        selectedFile = null;
-        selectedFileInfo.style.display = 'none';
-        startUploadBtn.disabled = true;
-        uploadProgress.style.width = '0%';
-        progressText.textContent = '0%';
-        uploadResult.innerHTML = '';
-    }
-    
-    // 文件选择处理
-    fileInput.addEventListener('change', (e) => {
-        if (e.target.files.length > 0) {
-            handleFileSelection(e.target.files[0]);
-        }
-    });
-    
-    // 拖放功能
-    fileDropArea.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        fileDropArea.classList.add('dragover');
-    });
-    
-    fileDropArea.addEventListener('dragleave', () => {
-        fileDropArea.classList.remove('dragover');
-    });
-    
-    fileDropArea.addEventListener('drop', (e) => {
-        e.preventDefault();
-        fileDropArea.classList.remove('dragover');
-        
-        if (e.dataTransfer.files.length > 0) {
-            handleFileSelection(e.dataTransfer.files[0]);
-        }
-    });
-    
-    // 处理文件选择
-    function handleFileSelection(file) {
-        // 验证文件类型
-        const validExtensions = ['.zip', '.rar', '.7z'];
-        const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
-        
-        if (!validExtensions.includes(fileExtension)) {
-            showUploadResult('error', '不支持的文件类型！请上传ZIP、RAR或7Z格式的压缩文件。');
-            return;
-        }
-        
-        // 验证文件大小 (免费版限制4.5MB)
-        if (file.size > 4.5 * 1024 * 1024) {
-            showUploadResult('error', '文件太大！最大支持4.5MB');
-            return;
-        }
-        
-        selectedFile = file;
-        fileNameDisplay.textContent = file.name;
-        fileSizeDisplay.textContent = formatFileSize(file.size);
-        selectedFileInfo.style.display = 'block';
-        startUploadBtn.disabled = false;
-    }
-    
-    // 开始上传
-    startUploadBtn.addEventListener('click', async () => {
-        if (!selectedFile) return;
-        
-        try {
-            // 重置UI
-            uploadProgress.style.width = '0%';
-            progressText.textContent = '0%';
-            uploadResult.innerHTML = '';
-            startUploadBtn.disabled = true;
-            startUploadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 上传中...';
-            
-            // 使用 Vercel Blob SDK 上传
-            const blob = await put(selectedFile.name, selectedFile, {
-                access: 'public',
-                token: BLOB_TOKEN,
-                onProgress: (event) => {
-                    const percent = Math.round((event.loaded / selectedFile.size) * 100);
-                    uploadProgress.style.width = `${percent}%`;
-                    progressText.textContent = `${percent}%`;
-                }
-            });
-            
-            // 上传成功
-            showUploadResult('success', `汉化包上传成功！<br>下载链接: <a href="${blob.url}" target="_blank">${blob.url}</a>`);
-            startUploadBtn.innerHTML = '<i class="fas fa-check"></i> 上传完成';
-        } catch (error) {
-            console.error('上传失败:', error);
-            showUploadResult('error', `上传失败: ${error.message}`);
-            startUploadBtn.disabled = false;
-            startUploadBtn.innerHTML = '<i class="fas fa-upload"></i> 开始上传';
-        }
-    });
-    
-    // 显示上传结果
-    function showUploadResult(type, message) {
-        uploadResult.innerHTML = `<div class="result-${type}"><i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${message}</div>`;
-    }
-    
-    // 格式化文件大小
-    function formatFileSize(bytes) {
-        if (bytes < 1024) return bytes + ' bytes';
-        else if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
-        else return (bytes / 1048576).toFixed(1) + ' MB';
-    }
-</script>
+<script src="js/main.js" type="module"></script>
+
 </body>
-</html>
+</html> 

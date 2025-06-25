@@ -655,8 +655,9 @@ footer {
 }
 
 .upload-area.dragover {
-    border-color: #4CAF50;
-    background: rgba(76, 175, 80, 0.1);
+  border-color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.1);
+  transform: scale(1.02);
 }
 
 .upload-icon {
@@ -682,8 +683,14 @@ footer {
 }
 
 .select-file-btn:hover {
-    background: #4CAF50;
-    color: white;
+  background: #4CAF50;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.select-file-btn, .filter-btn, .link-btn {
+  transition: all 0.2s ease-in-out;
 }
 
 .file-type-hint {

@@ -195,3 +195,16 @@ function loadNextPage() {
   // 启动加载流程
   loadData();
 };
+
+import { initUpload } from './upload.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 从 meta 标签安全获取令牌
+    const tokenMeta = document.querySelector('meta[name="blob-token"]');
+    const BLOB_TOKEN = tokenMeta ? tokenMeta.content : '';
+    
+    // 初始化上传功能
+    initUpload(BLOB_TOKEN);
+    
+    // 其他初始化代码...
+});
