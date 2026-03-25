@@ -533,7 +533,6 @@ footer {
 
 .modpack-img {
     transition: opacity 0.5s ease;
-    opacity: 0;
     background: linear-gradient(45deg, #1a2a3a, #0d1b2a);
 }
 
@@ -817,4 +816,47 @@ footer {
 
 .upload-result a:hover {
     text-decoration: underline;
+}
+
+/* 默认图片样式 - 使用 CSS 生成占位图 */
+.modpack-img {
+    background: linear-gradient(135deg, #1a2a3a, #0d1b2a);
+    position: relative;
+    min-height: 180px;
+    object-fit: cover;
+}
+
+/* 当图片加载失败时显示占位内容 */
+.modpack-img[src=""],
+.modpack-img[src="/img/default-modpack.png"],
+.modpack-img:not([src]) {
+    opacity: 0;
+}
+
+.modpack-img:not([src])::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #1a2a3a, #0d1b2a);
+    z-index: 1;
+}
+
+.modpack-img:not([src])::after {
+    content: "📦";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #4CAF50;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+/* 或者使用简单的背景色 */
+.modpack-img {
+    background: linear-gradient(135deg, #2c3e50, #1a2632);
 }
