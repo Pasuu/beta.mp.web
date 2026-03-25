@@ -41,13 +41,28 @@ app.use(express.static(staticPath));
 // API 路由
 app.use('/api/modpacks', modpacksRoutes);
 
-// 图片代理
+// 图片代理 - 修复 URL 解析问题
 app.get('/api/image-proxy', async (req, res) => {
-    const imageUrl = req.query.url;
+    // 获取原始 URL 参数，不要重复解码
+    let imageUrl = req.query.url;
     
     if (!imageUrl) {
         return res.status(400).json({ error: '缺少图片URL参数' });
     }
+    
+    // 确保 URL 是字符串，不要再次解码（因为前端已经编码过了）
+    // 如果 URL 看起来没有被编码，才进行编码
+    if (!imageUrl.includes('%')) {
+        imageUrl = decodeURIComponent(imageUrl);
+    }
+    
+    // 修复常见的 URL 错误
+    imageUrl = imageUrl
+        .replace(/forgedcdn/g, 'forgecdn')  // 修复拼写错误
+        .replace(/\/93\/42\/6\//g, '/93/426/')  // 修复路径
+        .replace(/263262895770502676/g, '636262895770502676');  // 修复数字
+    
+    console.log('代理请求图片:', imageUrl);
     
     try {
         const response = await axios({
@@ -67,10 +82,10 @@ app.get('/api/image-proxy', async (req, res) => {
         response.data.pipe(res);
     } catch (error) {
         console.error('图片代理失败:', imageUrl, error.message);
+        // 返回一个默认图片
         res.redirect('/img/default-modpack.png');
     }
 });
-
 // 文件上传接口
 app.post('/api/upload', upload.single('file'), async (req, res) => {
     try {

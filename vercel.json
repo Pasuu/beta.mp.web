@@ -16,6 +16,10 @@
             "dest": "/server/index.js"
         },
         {
+            "src": "/public/down/(.*)",
+            "dest": "/client/public/down/$1"
+        },
+        {
             "src": "/submit.html",
             "dest": "/client/submit.html"
         },

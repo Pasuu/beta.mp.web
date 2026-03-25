@@ -24,7 +24,23 @@ const App = {
             versions: [],
             tags: []
         });
-        
+
+            const getDownloadUrl = (downloadPath) => {
+        if (!downloadPath) return '#';
+        // 如果已经是完整 URL，直接返回
+        if (downloadPath.startsWith('http://') || downloadPath.startsWith('https://')) {
+            return downloadPath;
+        }
+        // 确保路径以 /public/down/ 开头
+        let cleanPath = downloadPath.startsWith('/') ? downloadPath : '/' + downloadPath;
+        // 如果路径已经包含 /public/down/，直接返回
+        if (cleanPath.includes('/public/down/')) {
+            return cleanPath;
+        }
+        // 否则添加 /public/down 前缀
+        return `/public/down${cleanPath}`;
+    };
+            
         // 分页状态
         const currentPage = ref(1);
         const pageSize = ref(50);
@@ -139,17 +155,17 @@ const App = {
         };
         
         // ========== 图片处理 ==========
-        const getImageUrl = (originalUrl) => {
-            if (!originalUrl) return '/img/default-modpack.png';
-            if (originalUrl.startsWith('/') || originalUrl.startsWith('data:')) {
-                return originalUrl;
-            }
-            return `/api/image-proxy?url=${encodeURIComponent(originalUrl)}`;
-        };
+const getImageUrl = (originalUrl) => {
+    if (!originalUrl) return '/img/default-modpack.png';
+    if (originalUrl.startsWith('/') || originalUrl.startsWith('data:')) {
+        return originalUrl;
+    }
+
+    let cleanUrl = originalUrl.trim();
+
+    return `/api/image-proxy?url=${encodeURIComponent(cleanUrl)}`;
+};
         
-        const handleImageError = (event) => {
-            event.target.src = '/img/default-modpack.png';
-        };
         
         // ========== 上传功能 ==========
         const handleFileSelect = (event) => {
@@ -312,7 +328,8 @@ const startUpload = async () => {
             toggleComment,
             getImageUrl,
             handleImageError,
-            formatFileSize
+            formatFileSize,
+            getDownloadUrl 
         };
     },
     template: `
@@ -454,7 +471,7 @@ const startUpload = async () => {
                                 <a v-if="pack.link.bilibilidwvideo" :href="'https://www.bilibili.com/video/' + pack.link.bilibilidwvideo" class="link-btn" target="_blank">
                                     <img src="/img/bilibili-line-red.svg" alt="B站视频" class="icon"> B站视频
                                 </a>
-                                <a v-if="pack.link.download" :href="pack.link.download" class="link-btn" download>
+                                <a v-if="pack.link.download" :href="getDownloadUrl(pack.link.download)" class="link-btn" download>
                                     <i class="fas fa-download"></i> 下载
                                 </a>
                             </div>

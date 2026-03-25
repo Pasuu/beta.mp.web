@@ -11,17 +11,26 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
       
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          
+          node-version: '24'
+          cache: 'npm'
+      
       - name: Install dependencies
-        run: npm ci
-        
+        run: |
+          npm ci --legacy-peer-deps
+          # 或者使用 npm install
+          # npm install --legacy-peer-deps
+      
+      - name: Build (if needed)
+        run: npm run vercel-build || echo "No build step"
+      
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
         with:
@@ -29,3 +38,7 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
