@@ -17,6 +17,10 @@ const App = {
             teams: 0
         });
         
+const handleImageError = (event) => {
+    event.target.src = '/img/default-modpack.png';
+};
+
         // 筛选状态
         const searchQuery = ref('');
         const activeFilter = ref('all');
