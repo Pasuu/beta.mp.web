@@ -2,11 +2,10 @@ name: Deploy to Vercel
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -24,12 +23,19 @@ jobs:
       
       - name: Install dependencies
         run: |
-          npm ci --legacy-peer-deps
-          # 或者使用 npm install
-          # npm install --legacy-peer-deps
+          npm install --legacy-peer-deps
+          echo "✅ Dependencies installed"
       
-      - name: Build (if needed)
-        run: npm run vercel-build || echo "No build step"
+      - name: List installed packages
+        run: npm list --depth=0 || true
+      
+      - name: Verify project structure
+        run: |
+          echo "Checking files..."
+          ls -la
+          test -f server/index.js && echo "✅ server/index.js exists" || echo "❌ server/index.js missing"
+          test -f client/index.html && echo "✅ client/index.html exists" || echo "❌ client/index.html missing"
+          test -f client/js/app.js && echo "✅ client/js/app.js exists" || echo "❌ client/js/app.js missing"
       
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
@@ -42,3 +48,4 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        continue-on-error: false
