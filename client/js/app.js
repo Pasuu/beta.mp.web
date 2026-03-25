@@ -52,7 +52,6 @@ const App = {
             fixedUrl = fixedUrl.replace(/263262895770502676/g, '636262895770502676');
             
             const result = `/api/image-proxy?url=${encodeURIComponent(fixedUrl)}`;
-            console.log('处理后URL:', result);
             return result;
         };
         
@@ -307,30 +306,50 @@ const App = {
     },
     template: `
         <div>
-            <header>
-                <div class="header-content">
-                    <div class="header-row">
-                        <div class="logo">
-                            <i class="fas fa-cubes logo-icon"></i>
-                            <div class="logo-text">
-                                <h1>Minecraft 整合包汉化</h1>
-                                <p>未经授权,不许转发</p>
-                            </div>
-                        </div>
-                        <div class="controls">
-                            <div class="search-container">
-                                <i class="fas fa-search search-icon"></i>
-                                <input type="text" v-model="searchQuery" placeholder="搜索包名称、标签或版本...">
-                            </div>
-                            <div class="nav-buttons">
-                                <a href="/" class="nav-btn"><i class="fas fa-home"></i> 首页</a>
-                                <a href="/submit.html" class="nav-btn"><i class="fas fa-plus-circle"></i> 提交汉化</a>
-                                <a href="/my-submissions.html" class="nav-btn"><i class="fas fa-history"></i> 我的提交</a>
-                            </div>
-                        </div>
+<header>
+    <div class="header-content">
+        <div class="header-row">
+            <div class="logo">
+                <i class="fas fa-cubes logo-icon"></i>
+                <div class="logo-text">
+                    <h1>Minecraft 整合包汉化</h1>
+                    <p>未经授权,不许转发</p>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="search-row">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" v-model="searchQuery" placeholder="搜索包名称、标签或版本...">
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="/" class="nav-btn"><i class="fas fa-home"></i> 首页</a>
+                        <a href="/submit.html" class="nav-btn"><i class="fas fa-plus-circle"></i> 提交汉化</a>
+                        <a href="/my-submissions.html" class="nav-btn"><i class="fas fa-history"></i> 我的提交</a>
                     </div>
                 </div>
-            </header>
+                
+                <div class="filters">
+                    <button class="filter-btn" :class="{ active: activeFilter === 'all' }" @click="setFilter('all')">全部</button>
+                    <button class="filter-btn" :class="{ active: activeFilter === 'download' }" @click="setFilter('download')">可下载</button>
+                    
+                    <template v-for="version in filterOptions.versions" :key="version">
+                        <button class="filter-btn" :class="{ active: activeFilter === 'version:' + version }" @click="setFilter('version:' + version)">
+                            {{ version }}
+                        </button>
+                    </template>
+                    
+                    <template v-for="tag in filterOptions.tags" :key="tag">
+                        <button class="filter-btn" :class="{ active: activeFilter === 'tag:' + tag }" @click="setFilter('tag:' + tag)">
+                            {{ tag }}
+                        </button>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
             <main>
                 <div class="stats">
                     <div class="stat-card"><h3>{{ stats.total }}</h3><p>汉化包总数</p></div>
@@ -356,10 +375,87 @@ const App = {
                             <div class="modpack-tags"><span v-for="tag in pack.tags_list" :key="tag" class="tag">{{ tag }}</span></div>
                             <div v-if="pack.isdownload" class="download-available"><i class="fas fa-download"></i> 可下载资源</div>
                             <div v-else class="download-not-available"><i class="fas fa-times-circle"></i> 无下载资源</div>
-                            <div class="modpack-links" v-if="pack.link">
-                                <a v-if="pack.link.curseforge" :href="'https://www.curseforge.com/minecraft/modpacks/' + pack.link.curseforge" class="link-btn" target="_blank">CurseForge</a>
-                                <a v-if="pack.link.download" :href="getDownloadUrl(pack.link.download)" class="link-btn" download><i class="fas fa-download"></i> 下载</a>
-                            </div>
+                           <div class="modpack-links" v-if="pack.link">
+    <!-- CurseForge -->
+    <a v-if="pack.link.curseforge" :href="'https://www.curseforge.com/minecraft/modpacks/' + pack.link.curseforge" class="link-btn" target="_blank">
+        <img src="/img/curseforge.svg" alt="CurseForge" class="icon"> CurseForge
+    </a>
+    
+    <!-- FTB -->
+    <a v-if="pack.link.ftb" :href="'https://www.feed-the-beast.com/modpacks/' + pack.link.ftb" class="link-btn" target="_blank">
+        <img src="/img/ftb.svg" alt="FTB" class="icon"> FTB
+    </a>
+    
+    <!-- MC百科 -->
+    <a v-if="pack.link.mcmod" :href="'https://www.mcmod.cn/modpack/' + pack.link.mcmod + '.html'" class="link-btn" target="_blank">
+        <img src="/img/mcmod.svg" alt="MC百科" class="icon"> MC百科
+    </a>
+    
+    <!-- GitHub -->
+    <a v-if="pack.link.github" :href="'https://github.com/' + pack.link.github" class="link-btn" target="_blank">
+        <i class="fab fa-github icon"></i> GitHub
+    </a>
+    
+    <!-- B站主页 -->
+    <a v-if="pack.link.bilibili" :href="'https://space.bilibili.com/' + pack.link.bilibili" class="link-btn" target="_blank">
+        <img src="/img/bilibili-line-blue.svg" alt="B站主页" class="icon"> B站主页
+    </a>
+    
+    <!-- B站视频 -->
+    <a v-if="pack.link.bilibilidwvideo" :href="'https://www.bilibili.com/video/' + pack.link.bilibilidwvideo" class="link-btn" target="_blank">
+        <img src="/img/bilibili-line-red.svg" alt="B站视频" class="icon"> B站视频
+    </a>
+    
+    <!-- B站文章（红色）-->
+    <a v-if="pack.link.bilibilidwred" :href="'https://www.bilibili.com/read/' + pack.link.bilibilidwred" class="link-btn" target="_blank">
+        <img src="/img/bilibili-line-red.svg" alt="B站文章" class="icon"> B站文章
+    </a>
+    
+    <!-- B站文章（黄色）-->
+    <a v-if="pack.link.bilibilidwyellow" :href="'https://www.bilibili.com/read/' + pack.link.bilibilidwyellow" class="link-btn" target="_blank">
+        <img src="/img/bilibili-line-yellow.svg" alt="B站文章" class="icon"> B站文章
+    </a>
+    
+    <!-- 安逸君 -->
+    <a v-if="pack.link.anyijun" href="https://anyijun.com/" class="link-btn" target="_blank">
+        <img src="/img/anyijun.svg" alt="安逸君" class="icon"> 安逸君
+    </a>
+    
+    <!-- CFPA -->
+    <a v-if="pack.link.CFPAOrg" href="https://cfpa.site/" class="link-btn" target="_blank">
+        <img src="/img/cfpa.svg" alt="CFPA" class="icon"> CFPA
+    </a>
+    
+    <!-- GTNH -->
+    <a v-if="pack.link.gtnh" href="https://gtnh.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5" class="link-btn" target="_blank">
+        <img src="/img/gtnh.svg" alt="GTNH" class="icon"> GTNH
+    </a>
+    
+    <!-- VM项目 -->
+    <a v-if="pack.link.VM" :href="'https://vmct-cn.top/' + pack.link.VM" class="link-btn" target="_blank">
+        <img src="/img/vm.svg" alt="VM项目" class="icon"> VM项目
+    </a>
+    
+    <!-- VM主页 -->
+    <a v-if="pack.link.VM0" href="https://vmct-cn.top/" class="link-btn" target="_blank">
+        <img src="/img/vm.svg" alt="VM主页" class="icon"> VM主页
+    </a>
+    
+    <!-- 百度网盘 -->
+    <a v-if="pack.link.baidupan" :href="'https://pan.baidu.com/s/' + pack.link.baidupan" class="link-btn" target="_blank">
+        <img src="/img/baiduyun.svg" alt="百度网盘" class="icon"> 百度网盘
+    </a>
+    
+    <!-- Modrinth -->
+    <a v-if="pack.link.modrinth" :href="'https://modrinth.com/modpack/' + pack.link.modrinth" class="link-btn" target="_blank">
+        <i class="fas fa-cube"></i> Modrinth
+    </a>
+    
+    <!-- 下载链接 -->
+    <a v-if="pack.link.download" :href="getDownloadUrl(pack.link.download)" class="link-btn" download>
+        <i class="fas fa-download"></i> 下载
+    </a>
+</div>
                         </div>
                     </div>
                 </div>

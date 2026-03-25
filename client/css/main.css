@@ -280,29 +280,35 @@ main {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 .link-btn {
     flex: 1;
-    min-width: 120px;
+    min-width: 100px;
     background: rgba(40, 50, 60, 0.9);
     color: #e0e0e0;
     border: 1px solid #4CAF50;
-    padding: 8px 15px;
+    padding: 8px 12px;
     border-radius: 8px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
     text-decoration: none;
     transition: all 0.3s;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+    font-size: 0.85rem;
 }
 
 .link-btn:hover {
     background: #4CAF50;
     color: white;
+    transform: translateY(-2px);
+}
+
+.link-btn .icon {
+    width: 16px;
+    height: 16px;
 }
 
 
@@ -859,4 +865,78 @@ footer {
 /* 或者使用简单的背景色 */
 .modpack-img {
     background: linear-gradient(135deg, #2c3e50, #1a2632);
+}
+
+/* 搜索和导航按钮同行布局 */
+.search-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.search-container {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* 筛选按钮容器 */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-height: 40px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.filters:hover {
+    max-height: 500px;
+}
+
+.filter-btn {
+    background: rgba(40, 50, 60, 0.7);
+    border: 1px solid #4CAF50;
+    color: #e0e0e0;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #4CAF50;
+    color: white;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .search-row {
+        flex-direction: column;
+    }
+    
+    .search-container {
+        width: 100%;
+    }
+    
+    .nav-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .filters {
+        max-height: none;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
 }
